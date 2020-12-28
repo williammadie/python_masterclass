@@ -19,12 +19,12 @@ header img {
     width: 103px;
 }
 
-/*----- NAVIAGATEUR -----*/
+/*----- NAVIGATEUR -----*/
 header nav {
     display: inline-block;
-    float: right;
     font-size: 18px;
     margin-top: 20px;
+    float: right;
 }
 header nav a {
     text-decoration: none;
@@ -46,7 +46,6 @@ main {
 }
 
 main a {
-    text-decoration: none;
     color: #4dd7fa;
 }
 
@@ -70,7 +69,6 @@ h1 {
 
 h2 {
     font-size: 24px;
-    background-color: none;
     text-decoration: underline;
     margin-top: 0px;
     margin-bottom: 10px;
@@ -90,13 +88,16 @@ table{
 td {
     background-color: #e5e5e5;
     color: black;
+    height: 40px;
+    text-align:center
 }
 
 th {
     background-color: #336fa0;
     color: white;
+    height: 40px;
+    font-weight: normal;
 }
-
 /*----- BOUTON RETOUR EN HAUT -----*/
 #gotop {
     display: block;
@@ -111,6 +112,7 @@ th {
     width: 15%;
     padding: 5px;
     margin-bottom: 35px;
+    text-decoration: none;
 
 }
 
@@ -143,13 +145,16 @@ th {
     float: right;
 }
 
-#sommaire h2{
-    text-decoration: none;
+#sommaire span{
+    display: inline-block;
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
 
 #sommaire a {
     display: block;
+    text-decoration: none;
     font-size: 16px;
 }
 
@@ -165,7 +170,6 @@ footer {
     padding-top: 20px;
     margin-top: 20px;
 }
-
 
 /*----- COPYRIGHT -----*/
 footer p {
@@ -190,6 +194,7 @@ footer address a{
 }
 
 footer address {
+    font-style: normal;
     text-align: left;
     display: inline-block;
     margin-left: 60px;
