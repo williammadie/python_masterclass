@@ -3,7 +3,10 @@
 
     <meta charset="utf-8">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link href="css/breviaire.css" rel="stylesheet" type="text/css">
     <title>Bréviaire - PythonMasterClass</title>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/logos/icon.png">
 
     <!-- Police du h1 -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -30,8 +33,8 @@
     <main>
         <h1>Bréviaire</h1>
         <div id="sommaire">
-            <nav aria-labelledby="sommaire-title">
-                <h2 id="sommaire-title">Sommaire</h2>
+            <nav>
+                <span>Sommaire</span>
                 <a href="#types-natifs">Types natifs</a>
                 <a href="#mots-cles">Mots clés</a>
                 <a href="#fonction-native">Fonction native</a>
@@ -50,11 +53,6 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Nom</td>
-                            <td>Exemple</td>
-                            <td>Définition</td>
-                        </tr>
                         <tr>
                             <td>int</td>
                             <td>4</td>
@@ -160,11 +158,6 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Nom</td>
-                            <td>Exemple</td>
-                            <td>Définition</td>
-                        </tr>
-                        <tr>
                             <td>and</td>
                             <td>x &lt y and x &lt z</td>
                             <td>Opérateur ET</td>
@@ -181,22 +174,22 @@
                         </tr>
                         <tr>
                             <td>break</td>
-                            <td>while condition:    break</td>
+                            <td>while condition:<br>    break</td>
                             <td>Permet de sortir d'une boucle</td>
                         </tr>
                         <tr>
                             <td>class</td>
-                            <td>class A:    pass</td>
+                            <td>class A:<br>    pass</td>
                             <td>Crée une Class</td>
                         </tr>
                         <tr>
                             <td>continue</td>
-                            <td>while True:    continue</td>
+                            <td>while True:<br>    continue</td>
                             <td>Permet passer directement à la prochaine itération</td>
                         </tr>
                         <tr>
                             <td>def</td>
-                            <td>def fonction():    pass</td>
+                            <td>def fonction():<br>    pass</td>
                             <td>Definition d'une fonction nommé</td>
                         </tr>
                         <tr>
@@ -206,27 +199,27 @@
                         </tr>
                         <tr>
                             <td>elif</td>
-                            <td>if condition_1:    do_this()elif condition_2:    do_something()else:    do_something_else()</td>
+                            <td rowspan=2>if condition_1:<br>    do_this()<br>elif condition_2:<br>    do_something()<br>else:<br>    do_something_else()</td>
                             <td>Rentre dans la condition_2 si la condition_1 est fausse</td>
                         </tr>
                         <tr>
                             <td>else</td>
-                            <td> </td>
+                            <td style="display:none;"></td>
                             <td>Rentre dans le else si les conditions plus haute sont fausse</td>
                         </tr>
                         <tr>
                             <td>except</td>
-                            <td>try:    do_something()except Exception:    passfinaly:    do_thing_ anyway()</td>
+                            <td rowspan=2>try:<br>    do_something()<br>except Exception:<br>    pass<br>finaly:<br>    do_thing_anyway()</td>
                             <td>Rentre dans le block si l'exception levée est la même que celle sélectionné</td>
                         </tr>
                         <tr>
-                            <td>finnally</td>
-                            <td> </td>
+                            <td>finally</td>
+                            <td style="display:none;"></td>
                             <td>Rentre dans tout les cas dans le finnally</td>
                         </tr>
                         <tr>
                             <td>for</td>
-                            <td>for i in range(10):    pass</td>
+                            <td>for i in range(10):<br>    pass</td>
                             <td>Permet de faire une boucle</td>
                         </tr>
                         <tr>
@@ -241,7 +234,7 @@
                         </tr>
                         <tr>
                             <td>if</td>
-                            <td>if condition:    do_something()</td>
+                            <td>if condition:<br>    do_something()</td>
                             <td>Rentre dans le block si la condition est vrais</td>
                         </tr>
                         <tr>
@@ -251,12 +244,12 @@
                         </tr>
                         <tr>
                             <td>in</td>
-                            <td>for i in range()    passif "c" in my_str:    do_something()</td>
-                            <td>Permet soit de parcourir un iteratorsoit de tester si un élément est dans un object</td>
+                            <td>for i in range()<br>    pass<br>if "c" in my_str:<br>    do_something()</td>
+                            <td>Permet soit de parcourir un iterator soit de tester si un élément est dans un object</td>
                         </tr>
                         <tr>
                             <td>is</td>
-                            <td>if a is b:    pass</td>
+                            <td>a is b</td>
                             <td>Test si a est le même object que b (même adresse mémoire, etc...)</td>
                         </tr>
                         <tr>
@@ -266,17 +259,17 @@
                         </tr>
                         <tr>
                             <td>not</td>
-                            <td>if not condition or a not in b:    do_something()</td>
+                            <td>if not condition or a not in b<br>    do_something()</td>
                             <td>Permet de mettre une négation sur une condition</td>
                         </tr>
                         <tr>
                             <td>or</td>
-                            <td>if a or b:    do_something()</td>
+                            <td>if a or b:<br>    do_something()</td>
                             <td>Opérateur OU</td>
                         </tr>
                         <tr>
                             <td>pass</td>
-                            <td>voir les autres mots clé pour  les exemples</td>
+                            <td>voir les autres mots clé <br> pour des exemples</td>
                             <td>Permet de faire des blocks vide</td>
                         </tr>
                         <tr>
@@ -286,27 +279,27 @@
                         </tr>
                         <tr>
                             <td>return</td>
-                            <td>def fonction():    return something</td>
+                            <td>def fonction():<br>    return something</td>
                             <td>Permet de retourner des valeurs dans une fonction</td>
                         </tr>
                         <tr>
                             <td>try</td>
-                            <td>try:    do_something()except Exception:    pass</td>
+                            <td>try:<br>    do_something()<br>except Exception:<br>    pass</td>
                             <td>Permet de capturer une Exception</td>
                         </tr>
                         <tr>
                             <td>while</td>
-                            <td>while condition:    do_something()</td>
+                            <td>while condition:<br>    do_something()</td>
                             <td>Boucle avec une condition</td>
                         </tr>
                         <tr>
                             <td>with</td>
-                            <td>with open(file) as f:    do_something(f)</td>
+                            <td>with open(file) as f:<br>    do_something(f)</td>
                             <td>Permet ouvrir un block en appelant la méthode __enter__() and __exit__() de l'objet (sur open permet fermer un fichier à la fin)</td>
                         </tr>
                         <tr>
                             <td>yield</td>
-                            <td>def to10():    for i in range(10):        yield i</td>
+                            <td>def to10():<br>    for i in range(10):<br>        yield i</td>
                             <td>Permet de faire un générateur</td>
                         </tr>
                     </tbody>
@@ -316,14 +309,14 @@
                 <h2>Fonction native</h2>
                 <p>
                     Les fonctions build-in sont les fonctions disponible de base dans python sans faire aucun import.
-                    Vous pouvez obtenir la liste compètes et documenté sur <a href="https://docs.python.org/fr/3/library/functions.html">la documentation des Fonctions native</a>
+                    Vous pouvez obtenir la liste compètes et documenté sur <a href="https://docs.python.org/fr/3/library/functions.html" target="_blank">la documentation des Fonctions native</a>
                 </p>
             </section>
             <section id="modele-de-donnees">
                 <h2>Modèle de données</h2>
                 <p>
                     Les modèles de données permette la surcharche d'opérateur ainsi que plein d'autre spécial sur les Class, 
-                    vous pouvez avoir plus d'information sur ces méthode de classes sur <a href="https://docs.python.org/fr/3/library/functions.html">la documentation des Modèles de données</a>
+                    vous pouvez avoir plus d'information sur ces méthode de classes sur <a href="https://docs.python.org/fr/3/library/functions.html" target="_blank">la documentation des Modèles de données</a>
                 </p>
             </section>
         </div>
@@ -338,11 +331,11 @@
         <!--  RESEAUX  -->
         <address>
             <p>Réseaux :</p>
-            <a href="https://discord.com"><img id=discord src="images/logos/discord.png" alt="Discord"/></a>
-            <a href="https://fr.linkedin.com"><img src="images/logos/linkedin.png" alt="Linkedin"/></a>
-            <a href="https://www.instagram.com"><img src="images/logos/instagram.png" alt="Instagram"/></a>
-            <a href="https://www.youtube.com" id=youtube><img src="images/logos/youtube.png" alt="Youtube"/></a>
-            <a href="https://twitter.com"><img src="images/logos/twitter.png" alt="Twitter"/></a>
+            <a href="https://discord.com" target="_blank"><img id=discord src="images/logos/discord.png" alt="Discord"/></a>
+            <a href="https://fr.linkedin.com" target="_blank"><img src="images/logos/linkedin.png" alt="Linkedin"/></a>
+            <a href="https://www.instagram.com" target="_blank"><img src="images/logos/instagram.png" alt="Instagram"/></a>
+            <a href="https://www.youtube.com" id=youtube target="_blank"><img src="images/logos/youtube.png" alt="Youtube"/></a>
+            <a href="https://twitter.com" target="_blank"><img src="images/logos/twitter.png" alt="Twitter"/></a>
         </address>
     </footer>
 </body>
