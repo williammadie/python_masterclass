@@ -1,0 +1,219 @@
+/*----- BODY -----*/
+body {
+	background: #232323 ;
+	color: white;
+	width: 1024px;
+	margin: auto;
+    font-family: Helvetica, 'Open Sans', Verdana, sans-serif;
+}
+
+/*----- HEADER -----*/
+header {
+    padding: 10px;
+    border-bottom: 4px solid #4dd7fa;
+    margin-bottom: 20px;
+}
+
+/*----- LOGO -----*/
+header img {
+    width: 103px;
+}
+
+/*----- NAVIAGATEUR -----*/
+header nav {
+    display: inline-block;
+    float: right;
+    font-size: 18px;
+    margin-top: 20px;
+}
+header nav a {
+    text-decoration: none;
+    color: #ffd245;
+    margin: 10px;
+}
+
+#selected {
+    border-bottom: 2px solid #ffa834;
+}
+
+header nav a:hover {
+    border-bottom: 1px solid #ffa834;
+}
+
+/*----- COMMUN -----*/
+main {
+    margin: 20px;
+}
+
+main a {
+    text-decoration: none;
+    color: #4dd7fa;
+}
+
+main a:hover {
+    color: #0077ff;
+}
+
+h1 {
+    font-family: 'Baloo 2', cursive;
+    font-size: 26px;
+    background-color: #ffd245;
+    text-align: center;
+    width: 100%;
+    border: 1px solid #ffa834;
+    border-radius: 5px;
+    color: black;
+    margin-bottom: 20px;
+    font-weight: 700;
+    padding: 10px;
+}
+
+h2 {
+    font-size: 24px;
+    background-color: none;
+    text-decoration: underline;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+/*----- TABLEAUX -----*/
+table, th, td {
+    border: 1px solid #c0c0c0;
+    border-collapse: collapse;
+}
+
+table{
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+td {
+    background-color: #e5e5e5;
+    color: black;
+}
+
+th {
+    background-color: #336fa0;
+    color: white;
+}
+
+/*----- BOUTON RETOUR EN HAUT -----*/
+#gotop {
+    display: block;
+    text-align: center;
+    background-color: #ffd245;
+    color: black;
+    border: 1px solid #ffa834;
+    border-radius: 3px;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15%;
+    padding: 5px;
+    margin-bottom: 35px;
+
+}
+
+#gotop:hover {
+    display: block;
+    background-color: #ffd245;
+    border: 1px solid #ffa834;
+    padding: 8px;
+    margin-top: 97px;
+    margin-bottom: 32px;
+}
+
+/*----- SOMMAIRE -----*/
+
+#with-sommaire {
+    display: inline-block;
+    width: 83%;
+    font-size: 14px;
+    margin: 0;
+}
+
+#sommaire {
+    position: sticky;
+    top: 10px;
+    padding: 10px;
+    background-color: #444444;
+    border: 1px solid #7a7a7a;
+    border-radius: 5px;
+    width: 13%;
+    float: right;
+}
+
+#sommaire h2{
+    text-decoration: none;
+}
+
+
+#sommaire a {
+    display: block;
+    font-size: 16px;
+}
+
+#sommaire a::before {
+    content: "• "; 
+}
+
+/*----- FOOTER -----*/
+footer {
+    text-align: center;
+    border-top: 4px solid #4dd7fa;
+    font-size: 14px;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+
+/*----- COPYRIGHT -----*/
+footer p {
+    display: inline-block;
+}
+
+footer p img {
+    height: 14px;
+    position: relative;
+    top: 2px; 
+}
+
+/*----- RESEAUX -----*/
+
+footer address a{
+    display: inline-block;
+    width: 20px;
+}
+
+#youtube{
+    width: 25px;
+}
+
+footer address {
+    text-align: left;
+    display: inline-block;
+    margin-left: 60px;
+    width: 210px;
+}
+
+footer address img {
+    height: 16px;
+    padding-bottom: 2px;
+    position: relative;
+    top: 7px; 
+    margin: 2px;
+}
+
+#discord{
+    height: 18px;
+    padding-bottom: 0px;
+}
+
+footer address img:hover {
+    height: 20px;
+    margin: 0px;
+}
+
+#discord:hover {
+    height: 22px;
+}

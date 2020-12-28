@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<head lang="fr">
+
+    <meta charset="utf-8">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <title>Bréviaire - PythonMasterClass</title>
+
+    <!-- Police du h1 -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <!--  HEADER  -->
+    <header id="top">
+        <!--  LOGO  -->
+        <a href="breviaire.html"><img src="images/logos/logo.png" alt="PythonMasterClass"/></a>
+
+        <!--  NAVIGATEUR PRINCIPALE  -->
+        <nav>
+            <a href="breviaire.html">Accueil</a>
+            <a href="breviaire.html">Cours</a>
+            <a href="breviaire.html" id="selected">Bréviaire</a>
+            <a href="breviaire.html">Contact</a>
+        </nav>
+    </header>
+
+    <!--  CODE DE LA PAGE  -->
+    <main>
+        <h1>Bréviaire</h1>
+        <div id="sommaire">
+            <nav aria-labelledby="sommaire-title">
+                <h2 id="sommaire-title">Sommaire</h2>
+                <a href="#types-natifs">Types natifs</a>
+                <a href="#mots-cles">Mots clés</a>
+                <a href="#fonction-native">Fonction native</a>
+                <a href="#modele-de-donnees">Modèle de données</a>
+            </nav>
+        </div>
+        <div id="with-sommaire">
+            <section id="types-natifs">
+                <h2>Types natifs</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nom</th>
+                            <th>Exemple</th>
+                            <th>Définition</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Nom</td>
+                            <td>Exemple</td>
+                            <td>Définition</td>
+                        </tr>
+                        <tr>
+                            <td>int</td>
+                            <td>4</td>
+                            <td>Nombre entier, il ne possède pas de limite autre que le système où il tourne</td>
+                        </tr>
+                        <tr>
+                            <td>float</td>
+                            <td>4.1</td>
+                            <td>Nombre réel entre -1.7976931348623158e+308 et 1.7976931348623157e+308</td>
+                        </tr>
+                        <tr>
+                            <td>complex</td>
+                            <td>(4+1j)</td>
+                            <td>Nombre complexe, même limite que le float</td>
+                        </tr>
+                        <tr>
+                            <td>str</td>
+                            <td>unTexte</td>
+                            <td>Représente une chaine de charactère</td>
+                        </tr>
+                        <tr>
+                            <td>type</td>
+                            <td>int, str, object</td>
+                            <td>Représente type en python, le type de type est lui-même</td>
+                        </tr>
+                        <tr>
+                            <td>bytes</td>
+                            <td>b'\x00\x00\x00\x00'</td>
+                            <td>Sequance d'octet</td>
+                        </tr>
+                        <tr>
+                            <td>list</td>
+                            <td>[1, 2]</td>
+                            <td>Liste de taille variable</td>
+                        </tr>
+                        <tr>
+                            <td>dict</td>
+                            <td>{1: "3", "1": 3, "orange" : 4}</td>
+                            <td>Dictionnaire permettant retrouver une valeur via une clé</td>
+                        </tr>
+                        <tr>
+                            <td>set</td>
+                            <td>{1, 2, 3, 4}</td>
+                            <td>Liste semblable à un dictionnaire sans valeurs</td>
+                        </tr>
+                        <tr>
+                            <td>frozenset</td>
+                            <td>frozenset({1, 2, 3, 4})</td>
+                            <td>Tuples semblable à un dictionnaire sans valeurs</td>
+                        </tr>
+                        <tr>
+                            <td>tuples</td>
+                            <td>(1, 2, 3)</td>
+                            <td>Liste immuable</td>
+                        </tr>
+                        <tr>
+                            <td>bytearray</td>
+                            <td>bytearray(b'test')</td>
+                            <td>Version mutable de bytes</td>
+                        </tr>
+                        <tr>
+                            <td>None</td>
+                            <td>None</td>
+                            <td>Objet de nulité</td>
+                        </tr>
+                        <tr>
+                            <td>object</td>
+                            <td>int, type, None, object</td>
+                            <td>Python ne possède que des objets</td>
+                        </tr>
+                        <tr>
+                            <td>bool</td>
+                            <td>True, False</td>
+                            <td>Boolean qui vaut soit True (Vrais) ou False (Faux)</td>
+                        </tr>
+                        <tr>
+                            <td>class</td>
+                            <td>int, MaVoiture</td>
+                            <td>Une Class représente un instanciateurs</td>
+                        </tr>
+                        <tr>
+                            <td>instance</td>
+                            <td>MaVoiture()</td>
+                            <td>Elément d'une Class</td>
+                        </tr>
+                        <tr>
+                            <td>iterator</td>
+                            <td>iter(...)</td>
+                            <td>Représente une fonction qui parcours un object ou en génères</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section id="mots-cles">
+                <h2>Mots clés</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nom</th>
+                            <th>Exemple</th>
+                            <th>Définition</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Nom</td>
+                            <td>Exemple</td>
+                            <td>Définition</td>
+                        </tr>
+                        <tr>
+                            <td>and</td>
+                            <td>x &lt y and x &lt z</td>
+                            <td>Opérateur ET</td>
+                        </tr>
+                        <tr>
+                            <td>as</td>
+                            <td>import Tkinter as Tk</td>
+                            <td>Permet renomer un module</td>
+                        </tr>
+                        <tr>
+                            <td>assert</td>
+                            <td>assert x + y == 1</td>
+                            <td>Permet une assertion</td>
+                        </tr>
+                        <tr>
+                            <td>break</td>
+                            <td>while condition:    break</td>
+                            <td>Permet de sortir d'une boucle</td>
+                        </tr>
+                        <tr>
+                            <td>class</td>
+                            <td>class A:    pass</td>
+                            <td>Crée une Class</td>
+                        </tr>
+                        <tr>
+                            <td>continue</td>
+                            <td>while True:    continue</td>
+                            <td>Permet passer directement à la prochaine itération</td>
+                        </tr>
+                        <tr>
+                            <td>def</td>
+                            <td>def fonction():    pass</td>
+                            <td>Definition d'une fonction nommé</td>
+                        </tr>
+                        <tr>
+                            <td>del</td>
+                            <td>del A</td>
+                            <td>Supprime un objet via la méthode __del__()</td>
+                        </tr>
+                        <tr>
+                            <td>elif</td>
+                            <td>if condition_1:    do_this()elif condition_2:    do_something()else:    do_something_else()</td>
+                            <td>Rentre dans la condition_2 si la condition_1 est fausse</td>
+                        </tr>
+                        <tr>
+                            <td>else</td>
+                            <td> </td>
+                            <td>Rentre dans le else si les conditions plus haute sont fausse</td>
+                        </tr>
+                        <tr>
+                            <td>except</td>
+                            <td>try:    do_something()except Exception:    passfinaly:    do_thing_ anyway()</td>
+                            <td>Rentre dans le block si l'exception levée est la même que celle sélectionné</td>
+                        </tr>
+                        <tr>
+                            <td>finnally</td>
+                            <td> </td>
+                            <td>Rentre dans tout les cas dans le finnally</td>
+                        </tr>
+                        <tr>
+                            <td>for</td>
+                            <td>for i in range(10):    pass</td>
+                            <td>Permet de faire une boucle</td>
+                        </tr>
+                        <tr>
+                            <td>from</td>
+                            <td>from itertools import product</td>
+                            <td>Permet d'importer directement d'un module</td>
+                        </tr>
+                        <tr>
+                            <td>global</td>
+                            <td>global ma_variable</td>
+                            <td>Prends ma_variable global et la met dans la fonction</td>
+                        </tr>
+                        <tr>
+                            <td>if</td>
+                            <td>if condition:    do_something()</td>
+                            <td>Rentre dans le block si la condition est vrais</td>
+                        </tr>
+                        <tr>
+                            <td>import</td>
+                            <td>import sys</td>
+                            <td>Importation d'un module</td>
+                        </tr>
+                        <tr>
+                            <td>in</td>
+                            <td>for i in range()    passif "c" in my_str:    do_something()</td>
+                            <td>Permet soit de parcourir un iteratorsoit de tester si un élément est dans un object</td>
+                        </tr>
+                        <tr>
+                            <td>is</td>
+                            <td>if a is b:    pass</td>
+                            <td>Test si a est le même object que b (même adresse mémoire, etc...)</td>
+                        </tr>
+                        <tr>
+                            <td>lambda</td>
+                            <td>lambda x: x+1</td>
+                            <td>Création d'une fonction anonyme</td>
+                        </tr>
+                        <tr>
+                            <td>not</td>
+                            <td>if not condition or a not in b:    do_something()</td>
+                            <td>Permet de mettre une négation sur une condition</td>
+                        </tr>
+                        <tr>
+                            <td>or</td>
+                            <td>if a or b:    do_something()</td>
+                            <td>Opérateur OU</td>
+                        </tr>
+                        <tr>
+                            <td>pass</td>
+                            <td>voir les autres mots clé pour  les exemples</td>
+                            <td>Permet de faire des blocks vide</td>
+                        </tr>
+                        <tr>
+                            <td>raise</td>
+                            <td>raise TypeError("err type")</td>
+                            <td>Leve une Exception</td>
+                        </tr>
+                        <tr>
+                            <td>return</td>
+                            <td>def fonction():    return something</td>
+                            <td>Permet de retourner des valeurs dans une fonction</td>
+                        </tr>
+                        <tr>
+                            <td>try</td>
+                            <td>try:    do_something()except Exception:    pass</td>
+                            <td>Permet de capturer une Exception</td>
+                        </tr>
+                        <tr>
+                            <td>while</td>
+                            <td>while condition:    do_something()</td>
+                            <td>Boucle avec une condition</td>
+                        </tr>
+                        <tr>
+                            <td>with</td>
+                            <td>with open(file) as f:    do_something(f)</td>
+                            <td>Permet ouvrir un block en appelant la méthode __enter__() and __exit__() de l'objet (sur open permet fermer un fichier à la fin)</td>
+                        </tr>
+                        <tr>
+                            <td>yield</td>
+                            <td>def to10():    for i in range(10):        yield i</td>
+                            <td>Permet de faire un générateur</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section id="fonction-native">
+                <h2>Fonction native</h2>
+                <p>
+                    Les fonctions build-in sont les fonctions disponible de base dans python sans faire aucun import.
+                    Vous pouvez obtenir la liste compètes et documenté sur <a href="https://docs.python.org/fr/3/library/functions.html">la documentation des Fonctions native</a>
+                </p>
+            </section>
+            <section id="modele-de-donnees">
+                <h2>Modèle de données</h2>
+                <p>
+                    Les modèles de données permette la surcharche d'opérateur ainsi que plein d'autre spécial sur les Class, 
+                    vous pouvez avoir plus d'information sur ces méthode de classes sur <a href="https://docs.python.org/fr/3/library/functions.html">la documentation des Modèles de données</a>
+                </p>
+            </section>
+        </div>
+        <a id="gotop" href="#top">Retour en haut</a>
+    </main>
+
+    <!--  FOOTER  -->
+    <footer>
+        <!--  COPYRIGHT  -->
+        <p><img src="images/bugs.png" alt="Bug"> All rights reserved - PythonMasterClass 2020 <img src="images/bugs.png" alt="Bug"/></p>
+
+        <!--  RESEAUX  -->
+        <address>
+            <p>Réseaux :</p>
+            <a href="https://discord.com"><img id=discord src="images/logos/discord.png" alt="Discord"/></a>
+            <a href="https://fr.linkedin.com"><img src="images/logos/linkedin.png" alt="Linkedin"/></a>
+            <a href="https://www.instagram.com"><img src="images/logos/instagram.png" alt="Instagram"/></a>
+            <a href="https://www.youtube.com" id=youtube><img src="images/logos/youtube.png" alt="Youtube"/></a>
+            <a href="https://twitter.com"><img src="images/logos/twitter.png" alt="Twitter"/></a>
+        </address>
+    </footer>
+</body>
