@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head lang="fr">
+
+        <meta charset="utf-8">
+        <link href="css/styles.css" rel="stylesheet" type="text/css">
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/logos/icon.png">
+        <title>Demo - Cours - PythonMasterClass</title>
+
+        <!-- FONT H1 -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&display=swap" rel="stylesheet">
+
+        <!-- CODEMIRROR -->
+        <link rel="stylesheet" href="plugin/codemirror/lib/codemirror.css">
+        <link rel="stylesheet" href="plugin/codemirror/theme/monokai.css">
+        <script src="plugin/codemirror/lib/codemirror.js"></script>
+        <script src="plugin/codemirror/mode/python/python.js"></script>
+
+    </head>
+    <body>
+
+        <!--  HEADER  -->
+        <header id="top">
+            <!--  LOGO  -->
+            <a href="breviaire.html"><img src="images/logos/logo.png" alt="PythonMasterClass"/></a>
+
+            <!--  NAVIGATEUR PRINCIPALE  -->
+            <nav>
+                <a href="index.html">Accueil</a>
+                <a href="demo.html"  id="selected">Cours</a>
+                <a href="breviaire.html">Bréviaire</a>
+                <a href="index.html">Contact</a>
+            </nav>
+        </header>
+
+        <!--  CODE DE LA PAGE  -->
+        <main>
+            <h1>Demo</h1>
+            <div id="sommaire">
+                <nav>
+                    <span>Sommaire</span>
+                    <a href="demo.html">Introduction</a>
+                    <a href="demo.html">Installation</a>
+                    <a href="demo.html">Erreurs</a>
+                    <a href="demo.html">Variables</a>
+                    <a href="demo.html">Booleans</a>
+                    <a href="demo.html">Conditions</a>
+                    <a href="demo.html">Boucles while</a>
+                    <a href="demo.html">Boucle for</a>
+                    <a href="demo.html">List et tuple</a>
+                    <a href="demo.html">Dictionnaires</a>
+                    <a href="demo.html">Fonctions</a>
+                    <a href="demo.html">Lambda</a>
+                    <a href="demo.html">Itinérables</a>
+                    <a href="demo.html">Yield</a>
+                    <a href="demo.html">Modularité</a>
+                    <a href="demo.html">Class</a>
+                    <a href="demo.html">Méthodes</a>
+                </nav>
+            </div>
+            <div id="with-sommaire">
+                <section>
+                    <h2>Titre 1</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, 
+                        vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, 
+                        ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, 
+                        tortor mauris molestie elit, et lacinia ipsum quam nec dui. 
+                        Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. 
+                        Aenean velit odio, elementum in tempus ut, vehicula eu diam. 
+                        Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis 
+                        sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, 
+                        a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci 
+                        ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, 
+                        malesuada quis ornare accumsan, blandit sed diam.
+                    </p>
+                    <code>
+import timeit
+from copy import deepcopy
+import re
+#wrong result got 2317 but it's 2242
+
+MONSTER_RE_TOP = re.compile("..................#.")
+MONSTER_RE_MID = re.compile("#....##....##....###")
+MONSTER_RE_BOT = re.compile(".#..#..#..#..#..#...")
+
+def rotate(codex):
+    return [codex[1], codex[2][::-1], codex[3], codex[0][::-1]]
+
+def flip(codex):
+    return [codex[2], codex[1][::-1], codex[0], codex[3][::-1]]
+
+class Tile:
+    def __init__(self, id_, content):
+        self.content = content
+        self.orignal = deepcopy(self.content)
+        self.id = id_
+        self.state = 0
+        self.codex = ["".join(list_side) for list_side in (
+            self.content[0], 
+            [line[-1] for line in self.content],
+            self.content[-1], 
+            [line[0] for line in self.content])]
+                    </code>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, 
+                        vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, 
+                        ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, 
+                        tortor mauris molestie elit, et lacinia ipsum quam nec dui. 
+                        Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. 
+                        Aenean velit odio, elementum in tempus ut, vehicula eu diam. 
+                        Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis 
+                        sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, 
+                        a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci 
+                        ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, 
+                        malesuada quis ornare accumsan, blandit sed diam.
+                    </p>
+                </section>
+                <section>
+                    <h2>Titre 2</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, 
+                        vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, 
+                        ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, 
+                        tortor mauris molestie elit, et lacinia ipsum quam nec dui. 
+                        Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. 
+                        Aenean velit odio, elementum in tempus ut, vehicula eu diam. 
+                        Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis 
+                        sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, 
+                        a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci 
+                        ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, 
+                        malesuada quis ornare accumsan, blandit sed diam.
+                    </p>
+                </section>
+            </div>
+            <a id="gotop" href="#top">Retour en haut</a>
+        </main>
+
+        <!--  FOOTER  -->
+        <footer>
+            <!--  COPYRIGHT  -->
+            <p><img src="images/bugs.png" alt="Bug"> All rights reserved - PythonMasterClass 2020 <img src="images/bugs.png" alt="Bug"/></p>
+
+            <!--  RESEAUX  -->
+            <address>
+                <p>Réseaux :</p>
+                <a href="https://discord.com" target="_blank"><img id=discord src="images/logos/discord.png" alt="Discord"/></a>
+                <a href="https://fr.linkedin.com" target="_blank"><img src="images/logos/linkedin.png" alt="Linkedin"/></a>
+                <a href="https://www.instagram.com" target="_blank"><img src="images/logos/instagram.png" alt="Instagram"/></a>
+                <a href="https://www.youtube.com" id=youtube target="_blank"><img src="images/logos/youtube.png" alt="Youtube"/></a>
+                <a href="https://twitter.com" target="_blank"><img src="images/logos/twitter.png" alt="Twitter"/></a>
+            </address>
+        </footer>
+        <script src="js/codemirror.js"></script>
+    </body>
+</html>
