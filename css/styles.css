@@ -3,7 +3,8 @@ body {
 	background: #232323 ;
 	color: white;
 	width: 1024px;
-	margin: auto;
+    margin: auto;
+    padding: 0px;
     font-family: Helvetica, 'Open Sans', Verdana, sans-serif;
 }
 
@@ -21,7 +22,7 @@ header img {
 
 /*----- NAVIGATEUR -----*/
 header nav {
-    display: inline-block;
+    display: block;
     font-size: 18px;
     margin-top: 20px;
     float: right;
@@ -58,7 +59,7 @@ h1 {
     font-size: 26px;
     background-color: #ffd245;
     text-align: center;
-    width: 100%;
+    width: 964px;
     border: 1px solid #ffa834;
     border-radius: 5px;
     color: black;
@@ -98,6 +99,7 @@ th {
     height: 40px;
     font-weight: normal;
 }
+
 /*----- BOUTON RETOUR EN HAUT -----*/
 #gotop {
     display: block;
