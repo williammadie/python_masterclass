@@ -1,0 +1,206 @@
+/*----- BODY -----*/
+body {
+	background: #232323 ;
+	color: white;
+	width: 1024px;
+	margin: auto;
+    font-family: Helvetica, 'Open Sans', Verdana, sans-serif;
+}
+
+a {
+    color: #4dd7fa;
+}
+
+
+
+/*----- HEADER -----*/
+header {
+    padding: 10px;
+    border-bottom: 4px solid #4dd7fa;
+    margin-bottom: 20px;
+}
+
+
+
+/*----- LOGO -----*/
+header img {
+    width: 103px;
+}
+
+
+
+/*----- NAVIGATEUR -----*/
+header nav {
+    display: inline-block;
+    float: right;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #ffd245;
+    margin: 10px;
+}
+
+#selected {
+    border-bottom: 2px solid #ffa834;
+}
+
+header nav a:hover {
+    border-bottom: 1px solid #ffa834;
+}
+
+
+
+/*----- SOMMAIRE -----*/
+
+h2 {
+    font-size: 24px;
+    background-color: none;
+    text-decoration: underline;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+#cours {
+    display: inline-block;
+    width: 83%;
+    font-size: 14px;
+    margin: 0;
+}
+
+#sommaire {
+    position: sticky;
+    top: 10px;
+    padding: 10px;
+    background-color: #444444;
+    border: 1px solid #7a7a7a;
+    border-radius: 5px;
+    width: 13%;
+    float: right;
+}
+
+#sommaire h2{
+    text-decoration: none;
+}
+
+
+#sommaire a {
+    display: block;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+#sommaire a::before {
+    content: "• "; 
+}
+
+
+
+/* ------------ Main ------------ */
+
+.illustrations {
+    width: 100%;
+    margin-left: 0%;
+}
+
+legend {
+    text-align: center;
+    font-style: oblique;
+    font-size: 16px;
+    color:  #4dd7fa;
+}
+
+main p {
+    font-size: 17px;
+    text-align: justify;
+}
+
+main ul {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+main h3,h4 {
+    font-size: 20px;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* ------------ Titre Contact ------------ */
+
+h1 {
+    background-color: #ffd245;
+    text-align: center;
+    color: #232323;
+    height: 60px;
+    padding-top: 20px;
+    border-radius: 6px;
+}
+
+
+
+/*----- FOOTER -----*/
+footer {
+    text-align: center;
+    border-top: 4px solid #4dd7fa;
+    font-size: 14px;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+
+
+/*----- COPYRIGHT -----*/
+footer p {
+    display: inline-block;
+}
+
+footer p img {
+    height: 14px;
+    position: relative;
+    top: 2px; 
+}
+
+
+
+/*----- RESEAUX -----*/
+
+footer nav a{
+    display: inline-block;
+    width: 20px;
+}
+
+#youtube{
+    width: 25px;
+}
+
+footer nav {
+    text-align: left;
+    display: inline-block;
+    margin-left: 60px;
+    width: 210px;
+}
+
+footer nav img {
+    height: 16px;
+    padding-bottom: 2px;
+    position: relative;
+    top: 7px; 
+    margin: 2px;
+}
+
+#discord{
+    height: 18px;
+    padding-bottom: 0px;
+}
+
+footer nav img:hover {
+    height: 20px;
+    margin: 0px;
+}
+
+#discord:hover {
+    height: 22px;
+}
