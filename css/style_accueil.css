@@ -1,0 +1,98 @@
+body {
+    background-color: #232323;
+    color: white;
+    width: 1024px;
+    margin: auto;
+    font-family: sans-serif;
+    line-height: 1.2;
+}
+
+
+/* ------------ Main ------------ */
+
+main {
+    margin-right: 40px;
+} 
+h1{  	
+	font-family: 'Baloo 2', cursive;
+	text-decoration: bold;
+	margin-left:5%;
+	color: #232323;
+}
+
+/* ------------ Partie droite ------------*/
+#section-accueil {
+	margin:25% 25% 25% 25%;
+	width: 550px;
+	height: 275px;
+	background: #ffd245;
+	border-color: #ffa834;
+	border-width: 1px;
+	border-style: solid;
+	border-radius:10px;
+	display:inline-block;
+
+}
+
+#imgpython {
+	margin:10px;
+	width: 250px;
+	height: 160px;
+	border-color: #000000;
+	border-style: solid;
+	display:inline-block;
+	float:left;
+}
+/* ------------ Partie gauche ------------*/
+#aside-accueil{
+	display:inline;
+	width: 250px;
+	height: 20px; 
+	padding-top:5px;
+	
+}
+
+.icone-accueil {
+	
+	width: 39px;
+	height: 39px;
+	margin-bottom:2px;
+	background: #ffd245;
+	border-color: #ffd245;
+	border-style: solid;
+	float:left;
+	display:inline;
+}
+
+.texte-accueil {
+	
+	color: #232323;
+	font-family: "Helvetica";
+	font-weight: 400;
+	font-size: 14px;
+	text-align: left;
+	
+}
+ 
+
+#boutoncours {
+	float:right;
+	width: 109px;
+	height: 32px;
+	padding-right:5px;
+	padding-top:5px;
+	margin-top:5px;
+	margin-right:15px;
+	background: #357ebd;
+	color: #ffffff;
+	border-color: #1464f6;
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 3px;
+	font-family: "Helvetica";
+	font-weight: 400;
+	font-size: 14px;
+	text-align: center;
+	text-decoration:none;
+} 
+
