@@ -1,17 +1,18 @@
-/*----- COLONE DES TABLEAUX -----*/
-td:first-child{
+/* ------------ Colone des tableaux ------------ */
+
+td:first-child{ /*première colone*/
     width: 9%;
 }
 
-td:first-child+td{
+td:first-child+td{ /*deuxième colone*/
     width: 25%;
     white-space: pre;
-    text-align:left;
+    text-align: left;
     padding-left: 10px;
     padding-right: 10px;
 }
 
-td:first-child+td+td {
+td:first-child+td+td { /*troisième colone*/
     padding-left: 10px;
     padding-right: 10px;
 } 

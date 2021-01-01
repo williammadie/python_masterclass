@@ -1,4 +1,5 @@
-/*----- BODY -----*/
+/* ------------ Body ------------ */
+
 body {
 	background: #232323 ;
 	color: white;
@@ -6,30 +7,46 @@ body {
     margin: auto;
     padding: 0px;
     font-family: Helvetica, 'Open Sans', Verdana, sans-serif;
+    font-size: 17px;
 }
 
-/*----- HEADER -----*/
+::-moz-selection { /* bugfix mozilla */
+    background: #b2b2b2;
+}
+
+::selection { /* effet souris */
+    background: #b2b2b2;
+}
+
+/* ------------ Debut Header ------------ */
+
 header {
     padding: 10px;
-    border-bottom: 4px solid #4dd7fa;
     margin-bottom: 20px;
+    border-bottom: 4px solid #4dd7fa;
 }
 
-/*----- LOGO -----*/
+
+/* ------------ Logo ------------ */
+
 header img {
     width: 103px;
 }
 
-/*----- NAVIGATEUR -----*/
+
+/* ------------ Navigateur principale ------------ */
+
 header nav {
     display: block;
-    font-size: 18px;
-    margin-top: 20px;
     float: right;
+    margin-top: 20px;
+    font-size: 18px;
 }
+
 header nav a {
-    text-decoration: none;
+    font-size: 20px;
     color: #ffd245;
+    text-decoration: none;
     margin: 10px;
 }
 
@@ -41,9 +58,15 @@ header nav a:hover {
     border-bottom: 1px solid #ffa834;
 }
 
-/*----- COMMUN -----*/
+/* ------------ Fin Header ------------ */
+
+/*----- Debut Main -----*/
 main {
     margin: 20px;
+}
+
+main p {
+    text-align: justify;
 }
 
 main a {
@@ -54,34 +77,96 @@ main a:hover {
     color: #0077ff;
 }
 
-h1 {
-    font-family: 'Baloo 2', cursive;
-    font-size: 26px;
-    background-color: #ffd245;
-    text-align: center;
-    width: 964px;
-    border: 1px solid #ffa834;
-    border-radius: 5px;
-    color: black;
-    margin-bottom: 20px;
-    font-weight: 700;
-    padding: 10px;
+main img {
+    width: 100%;
+    margin-left: 0%;
 }
 
-h2 {
+main figcaption {
+    text-align: center;
+    font-style: oblique;
+    font-size: 16px;
+    color:  #4dd7fa;
+}
+
+main p {
+    font-size: 17px;
+    text-align: justify;
+}
+
+main ul {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+#toph1 { /*titre page normal*/
+    display: block;
+    text-align: center;
+    font-family: 'Baloo 2', cursive;
+    font-size: 26px;
+    font-weight: 700;
+    color: black;
+    background-color: #ffd245;
+    border: 1px solid #ffa834;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 984px;
+    height: 60px;
+    line-height: 0px; /* hauteur de ligne */
+}
+
+main h2 {
     font-size: 24px;
     text-decoration: underline;
     margin-top: 0px;
     margin-bottom: 10px;
 }
 
-/*----- TABLEAUX -----*/
-table, th, td {
-    border: 1px solid #c0c0c0;
-    border-collapse: collapse;
+
+/* ------------ Sommaire ------------ */
+
+#with-sommaire {
+    display: inline-block;
+    width: 83%;
+    margin: 0;
 }
 
-table{
+#sommaire {
+    position: sticky; /*permets au sommaire dessandre en même temps que la page*/
+    float: right;
+    top: 10px;
+    padding: 10px;
+    background-color: #444444;
+    border: 1px solid #7a7a7a;
+    border-radius: 5px;
+    width: 13%;
+}
+
+#sommaire span{ /*titre du somaire*/
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+
+#sommaire a {
+    display: block;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+#sommaire a::before { /*premet l'ajout d'un point avant les parties*/
+    content: "• "; 
+}
+
+/* ------------ Tableaux ------------ */
+
+table, th, td {
+    border: 1px solid #c0c0c0;
+    border-collapse: collapse; /*bordure colée*/
+}
+
+table {
     margin-bottom: 30px;
     width: 100%;
 }
@@ -90,7 +175,7 @@ td {
     background-color: #e5e5e5;
     color: black;
     height: 40px;
-    text-align:center
+    text-align: center;
 }
 
 th {
@@ -100,93 +185,97 @@ th {
     font-weight: normal;
 }
 
-/*----- BOUTON RETOUR EN HAUT -----*/
+
+/* ------------ Bontons du bas ------------ */
+
+#bottombuttons {
+
+    width: 100%;
+    height: 50px;
+    position: relative;
+}
+
+#gonext {
+    position: absolute;
+    left: 587px;
+}
+
+#goprev {
+    position: absolute;
+    left: 267px;
+}
+
 #gotop {
+    position: absolute;
+    left: 427px;
+}
+
+#gonext::after, #goprev::before {
     display: block;
+    color: #fef8a0;
+    font-size: 30px;
+    line-height: 17px;
+}
+
+#gonext::after {
+    content: "▶";
+    float: right;
+    margin-left: 5px;
+}
+
+#goprev::before {
+    float: left;
+    margin-right: 5px;
+    content: "◀";
+}
+
+.botbutton {
+    display: inline-block;
     text-align: center;
-    background-color: #ffd245;
+    text-decoration: none;
     color: black;
+    background-color: #ffd245;
     border: 1px solid #ffa834;
     border-radius: 3px;
-    margin-top: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 15%;
     padding: 5px;
-    margin-bottom: 35px;
-    text-decoration: none;
-
+    width: 140px;
+    margin: 2px;
 }
 
-#gotop:hover {
-    display: block;
-    background-color: #ffd245;
-    border: 1px solid #ffa834;
-    padding: 8px;
-    margin-top: 97px;
-    margin-bottom: 32px;
+.botbutton:hover {
+    color: black;
+    padding: 7px;
+    margin: 0px;
 }
 
-/*----- SOMMAIRE -----*/
+/* ------------ Fin Main ------------ */
 
-#with-sommaire {
-    display: inline-block;
-    width: 83%;
-    font-size: 14px;
-    margin: 0;
-}
+/* ------------ Debut Footer ------------ */
 
-#sommaire {
-    position: sticky;
-    top: 10px;
-    padding: 10px;
-    background-color: #444444;
-    border: 1px solid #7a7a7a;
-    border-radius: 5px;
-    width: 13%;
-    float: right;
-}
-
-#sommaire span{
-    display: inline-block;
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-
-#sommaire a {
-    display: block;
-    text-decoration: none;
-    font-size: 16px;
-}
-
-#sommaire a::before {
-    content: "• "; 
-}
-
-/*----- FOOTER -----*/
 footer {
     text-align: center;
     border-top: 4px solid #4dd7fa;
-    font-size: 14px;
     padding-top: 20px;
     margin-top: 20px;
 }
 
-/*----- COPYRIGHT -----*/
+
+/* ------------ Copyright ------------ */
+
 footer p {
     display: inline-block;
 }
 
 footer p img {
-    height: 14px;
     position: relative;
     top: 2px; 
+    height: 14px;
 }
 
-/*----- RESEAUX -----*/
 
-footer address a{
+/* ------------ Réseaux ------------ */
+
+footer address a {
     display: inline-block;
     width: 20px;
 }
@@ -196,31 +285,33 @@ footer address a{
 }
 
 footer address {
+    display: inline-block;
     font-style: normal;
     text-align: left;
-    display: inline-block;
     margin-left: 60px;
     width: 210px;
 }
 
 footer address img {
+    position: relative;
+    top: 7px;
     height: 16px;
     padding-bottom: 2px;
-    position: relative;
-    top: 7px; 
     margin: 2px;
 }
 
-#discord{
-    height: 18px;
+#discord {
     padding-bottom: 0px;
+    height: 18px;
 }
 
 footer address img:hover {
-    height: 20px;
     margin: 0px;
+    height: 20px;
 }
 
 #discord:hover {
     height: 22px;
 }
+
+/* ------------ Fin Footer ------------ */

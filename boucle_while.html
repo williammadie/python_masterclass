@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <!-- Meta-données -->
+
+    <head>
+
+        <meta charset="utf-8">
+        <title>Boucle While - Cours - PythonMasterClass</title>
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/icons/icon.png">
+        <link href="css/styles.css" rel="stylesheet" type="text/css">
+
+        <!-- Police du h1 -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&display=swap" rel="stylesheet">
+
+        <!-- CodeMirror -->
+        <link rel="stylesheet" href="plugin/codemirror/lib/codemirror.css">
+        <link rel="stylesheet" href="plugin/codemirror/theme/monokai.css">
+        <script src="plugin/codemirror/lib/codemirror.js"></script>
+        <script src="plugin/codemirror/mode/python/python.js"></script>
+
+    </head>
+
+    <!-- Corps de la page -->
+
+    <body>
+
+        <!-- Haut de page -->
+        
+        <header>
+            <!-- Logo -->
+            <a href="breviaire.html"><img src="images/logos/logo.png" alt="PythonMasterClass"></a>
+
+            <!-- Barre de navigation -->
+            <nav>
+                <a href="index.html">Accueil</a>
+                <a href="demo.html" id="selected">Cours</a>
+                <a href="breviaire.html">Bréviaire</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </header>
+
+        <!-- Contenue de la page -->
+
+        <main>
+            <section>
+                <div id="toph1"><h1>Boucle While</h1></div>
+                <div id="sommaire">
+                    <nav>
+                        <span>Sommaire</span>
+                        <a href="introduction.html">Introduction</a>
+                        <a href="inbstallation.html">Installation</a>
+                        <a href="erreurs.html">Erreurs</a>
+                        <a href="variables.html">Variables</a>
+                        <a href="booleans.html">Booleans</a>
+                        <a href="conditions.html">Conditions</a>
+                        <a href="boucle_while.html">Boucle While</a>
+                        <a href="boucle_for.html">Boucle for</a>
+                        <a href="list_et_tuple.html">List et tuple</a>
+                        <a href="dictionnaires.html">Dictionnaires</a>
+                        <a href="fonctions.html">Fonctions</a>
+                        <a href="lambda.html">Lambda</a>
+                        <a href="Itinerables.html">Itinérables</a>
+                        <a href="yield.html">Yield</a>
+                        <a href="modularite.html">Modularité</a>
+                        <a href="class.html">Class</a>
+                        <a href="methodes.html">Méthodes</a>
+                    </nav>
+                </div>
+                <div id="with-sommaire">
+                    <article>
+                        <h2>Introduction aux boucles</h2>
+                        <p>
+                            Vous débutez tout juste la programmation et le concept de boucles vous est encore étranger. 
+                            Pas de panique ! Il s’agit d’une structure très simple et essentielle à tout code. Vous arriverez très vite à les utiliser !
+                        </p>
+                        <p>
+                            Ne laissez pas un nouveau concept vous démoraliser ! 
+                            En effet, au cours de votre voyage au pays du serpent, vous rencontrerez une multitude de termes techniques : 
+                            les termes les plus basiques seront traduits en français mais les plus poussés ne le seront pas toujours. 
+                            Ce n’est pas une raison pour vous arrêter !
+                        </p>
+                    </article>
+                    <article>
+                        <h2>Bon, une boucle c'est quoi ?</h2>
+                        
+                        <figure>
+                            <img src="images/boucle_while/boucles_intro.png" alt="Schéma du passage dans une boucle">
+                            <figcaption>
+                                fig.1 : Passage dans une boucle
+                            </figcaption>
+                        </figure>
+
+                        <p>
+                            Analyse de la figure :
+                            On peut observer le déroulement normal d’un programme python (à gauche) et on voit le passage dans une boucle contenant deux instructions (à droite).
+                            À gauche, l’ordinateur lit les instructions de façon linéaire et successive : instruction 1, puis instruction 2, puis instruction 3, puis instruction 4.  
+                            À droite, l’ordinateur lit l’instruction 1 normalement avant de rentrer dans une boucle à la ligne 3. Les instructions 2 et 3 vont être exécutées à de multiples reprises. En fait, elles vont être exécutées jusqu’à ce que la boucle s’arrête. 
+                            Lorsque l’ordinateur sort de la boucle, il recommence à lire le code ligne par ligne. Il exécute donc l’instruction 4 puis se termine. 
+                        </p>
+                        <p>
+                            Maintenant que l’on sait comment fonctionne une boucle, nous allons apprendre à en créer une ! 
+                            Il faut savoir qu’il existe deux types de boucles : les boucles while et les boucles for. 
+                            Commençons par les boucles while. En français, while signifie “tant que”. 
+                            Ici, il s’agit de répéter une instruction tant qu’une certaine condition est remplie. 
+                            Voici un exemple de syntaxe d’une boucle while :
+                        </p>
+
+                        <code>
+i=0                #Initialisation de i
+
+while i &lt; 4:           #Tant que i est strictement inférieur à 4
+    print("coucou")    #Instruction à répéter
+    i+=1               #Incrémentation de 1
+                        </code>
+
+                        <ul>
+                            <li>
+                                Ligne 4 : on attribue 0 à i. Si aucune valeur n’est attribuée à i,
+                                l’ordinateur ne peut pas lire la boucle, car il ne connaît pas la valeur initiale de i.
+                            </li>
+
+                            <li>Ligne 6 : on entre dans la boucle. Elle se répètera tant que i sera strictement inférieur à 4.</li> 
+
+                            <li>Ligne 7 : on affiche coucou.</li> 
+
+                            <li>
+                                Ligne 8 : on ajoute 1 à la valeur de i. 
+                                Sans cette instruction, i ne change jamais de valeur et la boucle est dite infinie car rien ne peut l’arrêter.
+                            </li> 
+                        </ul>
+                        <p>
+                            “Coucou” sera bien affiché 4 fois car i est initialisé à 0. On a donc : passage 0, passage 1, passage 2, passage 3.
+                            Ce qui nous fait, au total, 4 passages dans la boucle.
+                        </p> 
+                    </article>
+                </div>
+                <div id="bottombuttons">
+                    <a id="goprev" class="botbutton" href="conditions.html">Conditions</a>
+                    <a id="gotop" class="botbutton" href="#top">Retour en haut</a>
+                    <a id="gonext" class="botbutton" href="boucle_for.html">Boucle For</a>
+                </div>
+            </section>
+        </main>
+
+        <!-- Pied de page -->
+        <footer>
+            <!-- Copyright -->
+            <p><img src="images/icons/bugs.png" alt="Bug"> All rights reserved - PythonMasterClass 2020 <img src="images/icons/bugs.png" alt="Bug"></p>
+
+            <!-- Réseaux -->
+            <address>
+                <p>Réseaux :</p>
+                <a href="https://discord.com" target="_blank"><img id=discord src="images/logos/discord.png" alt="Discord"></a>
+                <a href="https://fr.linkedin.com" target="_blank"><img src="images/logos/linkedin.png" alt="Linkedin"></a>
+                <a href="https://www.instagram.com" target="_blank"><img src="images/logos/instagram.png" alt="Instagram"></a>
+                <a href="https://www.youtube.com" id=youtube target="_blank"><img src="images/logos/youtube.png" alt="Youtube"></a>
+                <a href="https://twitter.com" target="_blank"><img src="images/logos/twitter.png" alt="Twitter"></a>
+            </address>
+        </footer>
+
+        <!-- Script de configuration du code -->
+        <script src="js/codemirror.js"></script>
+    </body>
+</html>

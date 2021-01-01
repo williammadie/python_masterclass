@@ -1,51 +1,90 @@
 <!DOCTYPE html>
-<html>
-    <head lang="fr">
+<html lang="fr">
 
-        <meta charset="utf-8">
-        <link href="css/styles.css" rel="stylesheet" type="text/css">
-        <link rel="icon" type="image/png" sizes="32x32" href="./images/logos/icon.png">
-        <title>Index - PythonMasterClass</title>
+	<!-- Meta-données -->
+	
+    <head>
 
-        <!-- FONT H1 -->
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&display=swap" rel="stylesheet">
-
+		<meta charset="UTF-8">
+		<title>Accueil - PythonMasterClass</title>
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/icons/icon.png">
+		<link href="css/styles.css" rel="stylesheet" type="text/css">
+		<link href="css/accueil.css" rel="stylesheet" type="text/css">
+		
+		<!-- Police du h1 -->
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&display=swap" rel="stylesheet">
+		
     </head>
+
+    <!-- Corps de la page -->
+
     <body>
 
-        <!--  HEADER  -->
-        <header id="top">
-            <!--  LOGO  -->
-            <a href="index.html"><img src="images/logos/logo.png" alt="PythonMasterClass"/></a>
+        <!-- Haut de page -->
+        
+        <header>
+            <!-- Logo -->
+            <a href="breviaire.html"><img src="images/logos/logo.png" alt="PythonMasterClass"></a>
 
-            <!--  NAVIGATEUR PRINCIPALE  -->
+            <!-- Barre de navigation -->
             <nav>
-                <a href="index.html">Accueil</a>
-                <a href="demo.html">Cours</a>
+                <a href="index.html" id="selected">Accueil</a>
+                <a href="introduction.html">Cours</a>
                 <a href="breviaire.html">Bréviaire</a>
-                <a href="index.html">Contact</a>
+                <a href="contact.html">Contact</a>
             </nav>
-        </header>
+		</header>
+		
+		<!-- Contenue de la page -->
 
-        <!--  CODE DE LA PAGE  -->
-        <main>
-            Work in progress
-        </main>
+		<main>
+			<section id="section-accueil">
+				<h1>Commencez à apprivoiser la bête</h1>
+				<div>
+					<img src="images/acceuil/snake.png" alt="photo d'un python" id="imgpython">
+				</div>
+				<aside id="aside-accueil">
+					<div>
+						<img src="images/icons/casteduc.png" alt="icone de cast education" class="icone-accueil">
+						<p class="texte-accueil">
+							<br>Apprenez depuis votre canapé
+						</p>
+					</div>
+					<div>
+						<img src="images/icons/validation.png" alt="icone de validation" class="icone-accueil">
+						<p class="texte-accueil">
+							Variables, conditions, boucles,
+							 fonctions, dictionnaires, protips
+						</p>	
+					</div>
+					<div>
+						<img src="images/icons/unlock.png" alt="icone de cadenas" class="icone-accueil">
+						<p class="texte-accueil">
+							Débloquez un potentiel sans limite
+						</p>
+					</div>
+					<div>
+						<a href="demo.html" target="_blank" id="boutoncours">Voir le cours</a>
+					</div>
+				</aside>
+				
+			</section>
+		</main>
 
-        <!--  FOOTER  -->
+        <!-- Pied de page -->
         <footer>
-            <!--  COPYRIGHT  -->
-            <p><img src="images/bugs.png" alt="Bug"> All rights reserved - PythonMasterClass 2020 <img src="images/bugs.png" alt="Bug"/></p>
+            <!-- Copyright -->
+            <p><img src="images/icons/bugs.png" alt="Bug"> All rights reserved - PythonMasterClass 2020 <img src="images/icons/bugs.png" alt="Bug"></p>
 
-            <!--  RESEAUX  -->
+            <!-- Réseaux -->
             <address>
                 <p>Réseaux :</p>
-                <a href="https://discord.com" target="_blank"><img id=discord src="images/logos/discord.png" alt="Discord"/></a>
-                <a href="https://fr.linkedin.com" target="_blank"><img src="images/logos/linkedin.png" alt="Linkedin"/></a>
-                <a href="https://www.instagram.com" target="_blank"><img src="images/logos/instagram.png" alt="Instagram"/></a>
-                <a href="https://www.youtube.com" id=youtube target="_blank"><img src="images/logos/youtube.png" alt="Youtube"/></a>
-                <a href="https://twitter.com" target="_blank"><img src="images/logos/twitter.png" alt="Twitter"/></a>
+                <a href="https://discord.com" target="_blank"><img id=discord src="images/logos/discord.png" alt="Discord"></a>
+                <a href="https://fr.linkedin.com" target="_blank"><img src="images/logos/linkedin.png" alt="Linkedin"></a>
+                <a href="https://www.instagram.com" target="_blank"><img src="images/logos/instagram.png" alt="Instagram"></a>
+                <a href="https://www.youtube.com" id=youtube target="_blank"><img src="images/logos/youtube.png" alt="Youtube"></a>
+                <a href="https://twitter.com" target="_blank"><img src="images/logos/twitter.png" alt="Twitter"></a>
             </address>
         </footer>
     </body>

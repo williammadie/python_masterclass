@@ -1,0 +1,24 @@
+/* ------------ Main ------------ */
+
+main {
+    line-height: 1.3;   
+}
+
+
+/* ------------ Logos ------------ */
+
+.logos {
+    margin-top: 10px;
+    width: 64px;    
+}
+
+.logos:hover {
+    mix-blend-mode: luminosity;
+}
+
+
+/* ------------ FlexBox ------------ */
+
+.flexBox {
+    display: flex;
+}
