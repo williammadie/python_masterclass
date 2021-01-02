@@ -70,43 +70,79 @@
                 </div>
                 <div id="with-sommaire">
                     <article>
-                        <h2>Titre 1</h2>
+                        <h2>Principe de la boucle for</h2>
                         <p>
-                            Work in progress
+                            La seconde boucle que nous verrons dans ce cours est la boucle for. Il s'agit d'une instruction utile pour parcourir des séquence de données.
+                            Par exemple, pour parcourir une chaîne de caractères (qui n'est autre qu'une séquences de caractères), on utilisera la boucle for de la manière
+                            suivante : 
                         </p>
                         <code>
-import timeit
-from copy import deepcopy
-import re
-#wrong result got 2317 but it's 2242
+chaine = "John Rouge"
+for lettre in chaine:
+    print(lettre)
+                        </code>
+                        <p>
+                            Ici, "lettre" est une variable utilisée par le for. Elle va automatiquement prendre la valeur de chaque indice de
+                            la chaîne parcourue. Vous n'avez rien à faire ! Fascinant, non ? Et voici le résultat côté console :
+                        </p>
+                        <code>
+J
+o
+h
+n 
 
-def rotate(codex):
-    return [codex[1], codex[2][::-1], codex[3], codex[0][::-1]]
+R 
+o 
+u 
+g 
+e
                         </code>
                         <p>
-                            Work in progress
+                            Il existe une variante de cette boucle for destinée à un autre usage. Il s'agit de la boucle for i in range().
+                            On utilise cette variante lorsque l'on souhaite créer une boucle et l'exécuter un nombre de fois connu. Ainsi,
+                            on pourra écrire :
                         </p>
                         <code>
-                            import timeit
+for i in range(5):
+    print("coucou")
                         </code>
                         <p>
-                            Work in progress
+                            Cette boucle s'exécutera 5 fois et i prendra successivement les valeurs 0,1,2,3,4.
+                            On démarre à 0 et on s'arrête à 4 car 5 n'est pas inclu dans l'intervalle défini. Il est également possible
+                            d'écrire :
                         </p>
-                        <figure>
-                            <img src="images/boucle_while/boucles_intro.png" alt="Schéma du passage dans une boucle">
-                            <figcaption>
-                                fig.1 : Une image
-                            </figcaption>
-                        </figure>
+                        <code>
+for i in range(0, 5):
+    print("coucou")
+                        </code>
                         <p>
-                            Work in progress
+                            ou encore :
                         </p>
-                    </article>
-                    <article>
-                        <h2>Titre 2</h2>
+                        <code>
+for i in range(0, 5, 1):
+    print("coucou")
+                        </code>
                         <p>
-                            Work in progress
+                            Les deux écritures ci-dessus donneront le même résultat que la première boucle for i in range(5). Dans la deuxième écriture, on précise simplement
+                            le début de l'intervalle. Il est ainsi possible de partir de 4 et d'aller à 8 en écrivant for i in range(4,9) avec 4 inclu et 9 exclu.
+                            <br>
+                            <br>    
+                            Dans la troisième écriture, on précise en dernier le pas, c'est à dire la valeur qu'on va ajouter à i à chaque passage dans la boucle for. Ici, on a 
+                            for i in range(0, 5, 1), on va donc commencer à 0 et aller jusqu'à 4 en ajoutant 1 à chaque fois. <br>
+                            Il est possible d'utiliser un pas négatif en écrivant
+                            ,par exemple, for i in range(5, 0, -1). Cela aura le même résultat dans notre cas, cependant, i prendra successivement différentes valeurs : 5,4,3,2,1.
                         </p>
+                        
+                        <p>
+                            Remarques : 
+                        </p>
+                        <ul>
+                            <li>Il est préférable d'utiliser une boucle for i in range plutôt qu'une boucle while lorsque le nombre de passages dans la boucle est connu.
+                                Généralement, on réserve l'usage de la boucle while à des cas où on ne connaît pas le nombre de passages final.
+                            </li>
+                            <li>Dans la boucle for i in range, "i" est une variable exactement comme "lettre" dans la boucle for. Vous n'êtes donc pas obligé de l'appeler "i" !
+                                Il est d'ailleurs recommandé de lui donner un nom plus significatif par rapport à ce que vous faîtes.</li>
+                        </ul>
                     </article>
                 </div>
                 <div id="bottombuttons">
