@@ -69,44 +69,144 @@
                     </nav>
                 </div>
                 <div id="with-sommaire">
+                    
+                    <!-- Listes -->
+                    
                     <article>
-                        <h2>Titre 1</h2>
+                        <h2>Qu'est ce qu'une liste ?</h2>
                         <p>
-                            Work in progress
+                            Une liste, c'est une séquence. Elle est capable de contenir plusieurs objets. En fait, c'est une liste d'objets de n'importe quel type.
+                            Il est possible d'y mettre des entier, des décimaux, des chaînes de caractères... il est même possible de mélanger les types d'objets contenus
+                            dans une même liste ! Créons notre première liste :
                         </p>
                         <code>
-import timeit
-from copy import deepcopy
-import re
-#wrong result got 2317 but it's 2242
+fruits = [] #Création d'une liste vide (initialisation de la liste)
+                        </code>
+                        <p>
+                            Il est également possible de créer une liste contenant directement des objets. Il est possible d'ajouter autant d'objets que nous voulons dans une liste.
+                            Dans l'exemple ci-dessous, la liste "fruits" contient des chaînes de caractères : 
+                        </p>
+                        <code>
+fruits = ["banane", "orange", "fraise", "melon"]
+                        </code>
+                        <p>
+                            Il faut savoir qu'une liste assigne automatiquement un indice à chaque nouvel élément. Ainsi, le premier élément a l'indice 0,
+                            le deuxième a l'indice 1, le troisième l'indice 2...<br>
+                            Il est également possible d'ajouter un élément à la fin de notre liste en utilisant la méthode .append() ou d'ajouter un élément à l'indice
+                            désiré en utilisant .insert() :
+                        </p>
+                        <code>
+fruits = ["banane", "orange", "fraise", "melon"]    #Initialisation
 
-def rotate(codex):
-    return [codex[1], codex[2][::-1], codex[3], codex[0][::-1]]
+fruits.append("cerises")    #Ajoute cerise à la fin de la liste
+fruits.insert(3, "banane")  #Remplace la chaîne à l'indice 3 par banane
+
+print(fruits[3])    #Affiche banane
+print(fruits[4])    #Affiche cerise
                         </code>
                         <p>
-                            Work in progress
+                            Bon, maintenant que nous savons ajouter des éléments à notre liste, comment allons-nous les extraire pour pouvoir les utiliser si besoin ?
+                            Nous allons accéder aux éléments de la liste en passant par leur indice ! Exemple :
                         </p>
                         <code>
-                            import timeit
+fruits = ["banane", "orange", "fraise", "melon"]    #Initialisation
+
+print(fruits[0])    #Affiche banane
+print(fruits[1])    #Affiche orange
+print(fruits[2])    #Affiche fraise
+
+fruits[3] = "banane"    #Remplace melon par banane
+
+print(fruits[3])    #Affiche banane
                         </code>
                         <p>
-                            Work in progress
+                            Sortie côté console :
                         </p>
-                        <figure>
-                            <img src="images/boucle_while/boucles_intro.png" alt="Schéma du passage dans une boucle">
-                            <figcaption>
-                                fig.1 : Une image
-                            </figcaption>
-                        </figure>
+                        <code>
+banane
+orange
+fraise
+banane
+                        </code>
                         <p>
-                            Work in progress
+                            Pour finir avec les bases des listes, voyons comment supprimer un élément d'une liste. Il existe deux manière de le faire :
+                            <ul>
+                                <li>del</li>
+                                <li>remove()</li>
+                            </ul>
+                            La syntaxe est différente mais l'effet est le même :
                         </p>
+                        <code>
+fruits = ["banane", "orange", "fraise", "melon"]    #Initialisation
+
+del fruits[0]   #Supprime l'élément d'indice 0 (banane)
+
+fruits.remove(2) #Supprime l'élément d'indice 2 de la nouvelle liste (melon)
+
+print(fruits)    #Affiche la liste complète
+                        </code>
+                        <p>
+                            Sortie côté console :
+                        </p>
+                        <code>
+["orange","fraise"]
+                        </code>
+                        <br>
+                        <h2>Parcourir une liste de manière automatisée</h2>
+                        <p>
+                            Pour parcourir une liste de manière automatisée (sans avoir à écrire print(fruits[0]),print(fruits[1]),etc il faut utiliser une boucle. C'est super, nous
+                            savons les utiliser !
+                        </p>
+                        <code>
+fruits = ["banane", "orange", "fraise", "melon"]    #Initialisation
+
+for fruit in fruits:    #Pour chaque fruit dans la liste de fruits
+    print(fruit)        #Afficher le fruit en question
+                        </code>
+                        <p>
+                            Sortie côté console :
+                        </p>
+                        <code>
+banane
+orange
+fraise
+melon
+                        </code>
+                        <p>
+                            Il existe aussi la fonction enumerate() qui prend en paramètre une liste renvoie un objet contenant l'indice ET l'élement de la liste parcourue.
+                        </p>
+                        <code>
+fruits = ["banane", "orange", "fraise", "melon"]    #Initialisation
+
+for fruit in enumerate(fruits)
+    print(fruit)
+
+#Côté console
+(0, "banane")
+(1, "orange")
+(2, "fraise")
+(3, "melon")
+                        </code> 
                     </article>
+                    <br>
+                    
+                    <!-- Tuples -->
+
                     <article>
-                        <h2>Titre 2</h2>
+                        <h2>Et les tuples alors ?</h2>
                         <p>
-                            Work in progress
+                            Les tuples sont des listes immuables, on ne peut pas les modifier.Ils se définissent comme les listes mais avec des () à la place des [].
+                            Une fois créé, on ne peut pas ajouter ou supprimer d'objets contenus à l'intérieur du tuple.
                         </p>
+                        <code>
+tuple = ()  #Création d'un tuple vide
+tuple = ('a', 'b')  #Création d'un tuple contenant deux objets
+tuple = ('a',)      #Création d'un tuple contenant un objet (virgule obligatoire)
+                        </code>
+                        <p>
+                            Conernant leur usage, nous le verrons plus loin dans ce cours, notamment dans la page <a href="fonctions.html">fonctions</a>.
+                        </p>
+                    
                     </article>
                 </div>
                 <div id="bottombuttons">
