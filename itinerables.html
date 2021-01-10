@@ -126,21 +126,23 @@ print(un_tuple)
                         <code>
 grande_liste = list(range(100000000))
 
-# iterable plutot d'une deuxième liste
+# iterable plutot q'une deuxième liste
 iterable_gande_liste_pair = (n for n  in grande_liste if n%2==0)
                         </code>
                         <p>
-                            Généralement les iterables sont utiliser pour les grandes listes evitant de stocker plusieurs fois une même information
+                            Généralement les générateurs sont utiliser pour les grandes listes evitant de stocker plusieurs fois une même information
+                            ou pour contruire des objets (comme les listes par compréhension).  range est aussi un générateurs, 
+                            il crée une à une les valeurs et pas directement une liste.
                         </p>
                     </article>
                     <article>
-                        <h2>reserved et filter, des fonctions retournant un iterable</h2>
+                        <h2>reserved et filter, des fonctions sur des iterables</h2>
                         <p>
                             Et oui, il n'y rien de mieux que ces deux exemples, reversed permet de parcourir 
                             dans le sens inverse un iterable sans recrée une liste
                             et sans avoir besoin d'utiliser des indices, pour ce qui 
                             est de filter c'est identique, cette fonction ne crée pas une nouvelle liste filtré mais filtre au moment de l'itération.
-                            Pour voir des exemple l'utilisation de filter vous aller voir dans le cours précédant <a href="lambda.html"></a>
+                            Pour voir des exemple l'utilisation de filter vous aller voir dans <a href="lambda.html">le cours précédant</a>
                         </p>
                         <code>
 mot = "salut"
