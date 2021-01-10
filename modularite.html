@@ -72,10 +72,12 @@
                     <article>
                         <h2>Les modules extérieur</h2>
                         <p>
-                            Ils existe plein de modules comprenant des fonctions autour des mathémaiques (math), 
+                            Il existe plein de modules comprenant des fonctions autour des mathématiquess 
+                            (<a href="https://docs.python.org/3/library/math.html?highlight=math">math</a>), 
                             itinérable (<a href="https://docs.python.org/3/library/itertools.html">itertools</a>), 
-                            tableau à n dimantion (numpy) ou bien permettant l'interaction avec l'os (os)
-                            ou le systeme (sys).
+                            tableau à n dimantion (<a href="https://numpy.org/doc/stable/user/quickstart.html">numpy</a>) 
+                            ou bien permettant l'interaction avec l'os (<a href="https://docs.python.org/fr/3.9/library/os.html?highlight=os">os</a>)
+                            ou le systeme (<a href="https://docs.python.org/fr/3.9/library/sys.html?highlight=sys">sys</a>).
                         </p>
                         <code>
 import itertools
@@ -84,14 +86,17 @@ from math import cos
 from math import *
                         </code>
                         <p>
-                            Tout d'abord il existe plusieurs façons d'importer des modules. A la première ligne nous importons
-                            tout le module itertools, à la deuxièeme ligne on import le module numpy en le renommant via le
-                            mot clé as permettant de racoursir l'ecriture. A la troisème ligne nous importons que la fonction cos
-                            et nous n'auront donc plus a préciser le module lors de l'appel. Pour la dernière ligne elle permet
-                            d'importer toute les fonctions d'un modules sans avoir repriser le module.
+                            Tout d'abord il existe plusieurs façons d'importer des modules. 
+                            À la première ligne nous importons tout le module itertools, 
+                            à la deuxième ligne on import le module numpy en le renommant 
+                            via le mot-clé as permettant des racoursir l'écriture.
+                            À la troisième ligne nous importons que la fonction cos 
+                            et nous n'auront donc plus à préciser le module lors de l'appel. 
+                            Pour la dernière ligne elle permet d'importer toutes 
+                            les fonctions d'un module sans avoir répété le module.
                         </p>
                         <code class="firstLineNumber5">
-# parcours tout les tulpes possible composé de 0123456789abcdef d'une longeur de 2
+# parcours tous les tulpes possibles composé de 0123456789abcdef d'une longueur de 2
 for chars in itertools.product("0123456789abcdef", repeat=2):
     print("".join(chars)) 
 
@@ -103,31 +108,31 @@ print(array)
 print(cos(10))
                         </code>
                         <p>
-                            La puissance des modules est que vous n'avez pas refaire ce qui a déjà été partager par d'autre.
-                            Cela permet de faire des projets rapidement et efficasement et fait une des force majeurs de python.
+                            La puissance des modules est que vous n'avez pas refait ce qui a déjà été partager par des autres.
+                            Cela permet de faire des projets rapidement et efficacement et fait une des forces majeures de python.
                         </p>
                     </article>
                     <article>
                         <h2>Vos propres modules</h2>
                         <p>
-                            Vos code commancent à être long il serais donc mieux de pouvoir les mettres dans plusieurs fichier
-                            et bien vous le pouvez et ceux d'un façons très simple .
+                            Vos codes commencent à être long il serait donc mieux de pouvoir 
+                            les mettre dans plusieurs fichiers et biens vous le pouvez et ceux d'une façon très simple.
                         </p>
                         <code>
 def bonjour(nom):
     print(f"Bonjour {nom}")
                         </code>
                         <p>
-                            Voulais un code simple que vous aimeriez utilisé dans 
-                            votre programme principale, vous avez juste à faire comme suit.
+                            Voici un code simple que vous aimeriez utilisé dans votre programme principal, 
+                            vous avez juste à faire comme suit pour l'utiliser.
                         </p>
                         <code>
 from salutation import bonjour
 
-bonjour("Alice") # Bonjour Alice
+bonjour("Alice") # out : Bonjour Alice
                         </code>
                         <p>
-                            Pour que tout ce passe comme prévu il faut bien que les deux fichier soit au endroit 
+                            Pour que tout ce passe comme prévu il faut bien que les deux fichier soit au endroit.
                         </p>
                         <figure>
                             <img src="images/modularite/orga.png" alt="Image de main.py et salutation.py dans un dossier nommé projet">
@@ -136,8 +141,8 @@ bonjour("Alice") # Bonjour Alice
                             </figcaption>
                         </figure>
                         <p>
-                            Dans le cas ou il salutation serais dans un dossier nommé mesfonction 
-                            il faudrait non plus import salutation mais mesfonction.salutation
+                            Dans le cas où il salutation serait dans un dossier nommé mesfonction, 
+                            il faudrait non plus import salutation mais mesfonction.salutation.
                         </p>
                     </article>
                 </div>

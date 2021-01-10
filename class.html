@@ -72,38 +72,62 @@
                     <article>
                         <h2>Une class c'est quoi ?</h2>
                         <p>
-                            Une class est une sorte de moule permettant de crée des instances, ces instances sont objets.
-                            par exemple 4 est une instance de la class int et int est une instance de type (pour les curieux aller
-                            vous renseigner sur le class qui instansie type).
+                            Une Class sont une sorte de moule permettant de créé des instances, ces instances sont objets. 
+                            Par exemple 4 est une instance de la class int et int est une instance de type 
+                            (pour les curieux allers vous renseigner sur le Class qui instansie type).
                         </p>
                         <code>
 print(type(4)) # &lt;class 'int'&gt;
 print(type(int)) # &lt;class 'type'&gt;
                         </code>
                         <p>
-                            Work in progress
+                            Nous pouvons aussi créent nos propres classes, par exemple vous pouvez créer une class Maison.
                         </p>
                         <code>
-                            import timeit
+class Maison:
+    pass
+
+une_maison = Maison()
+print(type(une_maison)) # &lt;class '__main__.Maison'&gt;
                         </code>
                         <p>
-                            Work in progress
+                            C'est bien beau une maison mais il faut aussi que l'on puisse lui définir des valeurs !
                         </p>
-                        <figure>
-                            <img src="images/boucle_while/boucles_intro.png" alt="Schéma du passage dans une boucle">
-                            <figcaption>
-                                fig.1 : Une image
-                            </figcaption>
-                        </figure>
+                        <code>
+class Batiment:
+    def __init__(self, adresse):
+        self.adresse = adresse
+
+batiment = Batiment("140 Rue de la Nouvelle France")
+print(batiment.adresse) # 140 Rue de la Nouvelle France
+                        </code>
                         <p>
-                            Work in progress
+                            _init__ et une fonction appelée lors de la création d'une instance, 
+                            la variable self correspond à l'instance, 
+                            le nom self n'est obligatoire on aurait pu lui donner n'importe quel nom. 
                         </p>
                     </article>
                     <article>
-                        <h2>Titre 2</h2>
+                        <h2>L'Héritage</h2>
                         <p>
-                            Work in progress
+                            Une notion importante des classes est l'héritage, il permet de faire en sorte qu'une class provienne d'un autre, 
+                            Par exemple on veut faire en sorte de faire un immeuble qui serait un bâtiment.
                         </p>
+                        <code>
+class Batiment:
+    def __init__(self, adresse):
+        self.adresse = adresse
+
+class Immeuble(Batiment):
+    def __init__(self, adresse, habitants):
+        super().__init__(adresse)
+        self.habitants = habitants
+
+immeuble = Immeuble("78 Rue du Python", ["Alice", "Bob"])
+print(immeuble.adresse) # 78 Rue du Python
+print(immeuble.habitants) # ['Alice', 'Bob']
+print(type(immeuble)) # &lt;class '__main__.Immeuble'&gt;
+                        </code>
                     </article>
                 </div>
                 <div id="bottombuttons">

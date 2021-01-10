@@ -70,42 +70,70 @@
                 </div>
                 <div id="with-sommaire">
                     <article>
-                        <h2>Titre 1</h2>
+                        <h2>Méthodes : fonctions des objets</h2>
                         <p>
-                            Work in progress
+                            Une méthode c'est un fonction qui agit sur un objet, vous pouvez voir un exemple ci-dessous
                         </p>
                         <code>
-import timeit
-from copy import deepcopy
-import re
-#wrong result got 2317 but it's 2242
+class Position:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
 
-def rotate(codex):
-    return [codex[1], codex[2][::-1], codex[3], codex[0][::-1]]
+    def move(self, x=0, y=0):
+        self.x += x
+        self.y += y
+
+pos = Position(10, 5)
+print(pos.x, pos.y) # 10 5
+
+pos.move(5, 2)
+print(pos.x, pos.y) # 15 7
+
+Position.move(pos, -5, -2) # pas approprié
+print(pos.x, pos.y) # 10 5
                         </code>
                         <p>
-                            Work in progress
+                            Comme vous pouvez le voir move et une fonction qui prend en paramètre self, x, y et ajoute x à self.x et y à self.y.
+                            Il y a deux façons de le faire la première est la façon normale et la deuxième la 
+                            manière explicite expliquant l'utilisation du mot-clé self.
+                        </p>
+                        <p>
+                            De plus comme vous avez pu le constater précédemment, __init__ 
+                            est aussi une méthode spécial marquée par la présence de __ au début et fin. Comme autre méthode spécial 
+                            on peut aussi compter __new__ généralement utilisé pour l'héritage des <a href="breviaire.html#types-natifs">types natifs</a>.
+                            ces méthodes sont nommé <a href="breviaire.html#modele-de-donnees">Modèle de données</a>, 
+                            elles permettent entre autres de tester l'égaliter, l'affichage, l'iteration, l'appartenance ...
                         </p>
                         <code>
-                            import timeit
+class Position:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+    
+    def __eq__(self, other):
+        return isinstance(other, Position) and self.x==other.x and self.y==self.y
+    
+    def __str__(self):
+        return f"Position(x={self.x}, y={self.y})"
+    
+    def __add__(self, other):
+        return Position(self.x+self.x, self.y+other.y)
+
+pos1 = Position(10, 5)
+pos2 = Position(9, 8)
+print(pos1) # appel à __str__, out : Position(x=10, y=5)
+print(pos1==pos2) # appel à __eq__, out : False
+print(pos1+pos2) # appel à __add__, out : Position(x=20, y=13)
                         </code>
-                        <p>
-                            Work in progress
-                        </p>
-                        <figure>
-                            <img src="images/boucle_while/boucles_intro.png" alt="Schéma du passage dans une boucle">
-                            <figcaption>
-                                fig.1 : Une image
-                            </figcaption>
-                        </figure>
-                        <p>
-                            Work in progress
-                        </p>
                     </article>
                     <article>
-                        <h2>Titre 2</h2>
+                        <h2>Ce Cours est désormait finit !</h2>
                         <p>
-                            Work in progress
+                            Après toute ces péripéthies, notre chemin sépare ici. <br>N'oubliez jamais la 
+                            bible qu'est <a href="https://docs.python.org/release/3.9.1/">la documentation officiel de python</a>. <br>
+                            Le site <a href="https://stackoverflow.com/">Stackoverflow</a> est aussi un merveilleux endroit pour trouver les réponses
+                            à vos questions ou erreurs.
                         </p>
                     </article>
                 </div>

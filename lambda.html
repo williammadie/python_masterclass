@@ -72,8 +72,8 @@
                     <article>
                         <h2>Une fonction en plus compact mais pas que !</h2>
                         <p>
-                            Précédemment nous avons vu les fonctions permettant de gérer des parties 
-                            code se répétant à plusieurs endroits et une meilleure optimisation de l'organisation. 
+                            Précédemment nous avons vu les fonctions permettant de gérer des parties de
+                            code se répétant à plusieurs endroits et permettant une meilleure optimisation de l'organisation. 
                             Une fonction fait une action, mais nous pouvons très bien les faire 
                             en une ligne grâce à des fonctions lambda.
                         </p>
@@ -98,7 +98,7 @@ print(factorielle_lambda(3), factorielle_def(3))
                             De plus comme ces fonctions ne possèdent pas de nom elles ont aussi un mauvais traceback
                             qui empêche d'avoir des messages clairs indiquant le nom de la fonction où l'erreur s'est produite.
                         </p>
-                        <code>
+                        <code class="console">
 Traceback (most recent call last):
 File "c:/PythonMasterClass/lambda.py", line 7, in &lt;module&gt;
     division_de_10_lambda(0)
@@ -110,7 +110,7 @@ ZeroDivisionError: division by zero
                             Une erreur dans une fonction lambda n'affichera pas dans le stack le nom de la variable qui la stocke
                             (elle affichera par contre la ligne ou la fonction est déclarée).
                         </p>
-                        <code>
+                        <code class="console">
 Traceback (most recent call last):
 File "c:/PythonMasterClass/lambda.py", line 7, in &lt;module&gt;
     division_de_10(0)

@@ -72,10 +72,12 @@
                     <article>
                         <h2>Parcourir une liste</h2>
                         <p>
-                            Comme vous l'avez vu précédement les liste peuvent être parcourus dans des boucles for
-                            en revanche vous n'avez pas encore vu comment cela était possible.<br>
+                            Comme vous l'avez vu précédemment les liste peuvent être parcourus dans des boucles for
+                            en revanche vous n'avez pas encore vu comment cela était possible.
+                        </p>
+                        <p>
                             Pour qu'un objet soit parcourable il faut qu'il possède une méthode __iter__() qui sera appeller
-                            l'or de l'entrer dans une bouble ou la fonction iter()
+                            lors de l'entrée dans une boucle ou la fonction iter().
                         </p>
                         <code>
 for i in range(3, 10): # appel de __iter__ implicite
@@ -85,7 +87,7 @@ for i in range(3, 10).__iter__(): # appel de __iter__ explicite
     print(i)    
                         </code>
                         <p>
-                            Ces deux code font donc exactement la même chose. On peut aussi le faire sous cette forme 
+                            Ces deux codes font donc exactement la même chose. On peut aussi le faire sous cette forme.
                         </p>
                         <code>
 iterator =  range(3, 10).__iter__() 
@@ -96,14 +98,14 @@ while True:
         break
                         </code>
                         <p>
-                            A ce moment vous vous demander ce qui est next, c'est une methode qui permet d'obtenir le prochain élément
-                            de l'iterator et dans le cas ou il n'y a plus de valeur a renvoyer alors l'exception StopIteration est levé.
+                            À ce moment vous vous demander ce qui est next, c'est une methode qui permet d'obtenir le prochain élément
+                            de l'iterator et dans le cas où il n'y a plus de valeur à renvoyer alors l'exception StopIteration est levé.
                         </p>
                     </article>
                     <article>
                         <h2>Des générateurs !</h2>
                         <p>
-                            Comme vous avez pu le voir dans <a href="list_et_tuple.html">List et tuple</a>, un tuple est déclarer d'une certaine façons
+                            Comme vous avez pu le voir dans <a href="list_et_tuple.html">List et tuple</a>, un tuple est déclaré d'une certaine façons
                         </p>
                         <code>
 pas_un_tuple = (n*3.14 for n in range(10))
@@ -118,10 +120,12 @@ print(un_tuple)
 (0.0, 3.14, 6.28, 9.42, 12.56, 15.700000000000001, 18.84, 21.98, 25.12, 28.26) 
                         </code>
                         <p>
-                            Comme vous pouvez le voir la syntaxe (expresion de génération) et réserver au générateurs.<br>
+                            Comme vous pouvez le voir la syntaxe (expresion de génération) et réserver au générateurs.
+                        </p>
+                        <p>
                             Mais quesqu'un générateur ? Est bien un générateur c'est un objet qui crée un iterable sur des valeurs ou objets.
-                            Il permet en autre un écriture plus simple des boucles et évite de crée des listes qui prendrons plus de place
-                            que la gestion d'un valeurs générér une par une.
+                            Il permet en outre une écriture plus simple des boucles et évite de créé des listes qui prendront plus de place
+                            que la gestion d'une valeurs générer une par une.
                         </p>
                         <code>
 grande_liste = list(range(100000000))
@@ -130,19 +134,19 @@ grande_liste = list(range(100000000))
 iterable_gande_liste_pair = (n for n  in grande_liste if n%2==0)
                         </code>
                         <p>
-                            Généralement les générateurs sont utiliser pour les grandes listes evitant de stocker plusieurs fois une même information
-                            ou pour contruire des objets (comme les listes par compréhension).  range est aussi un générateurs, 
+                            Généralement les générateurs sont utilisé pour les grandes listes évitant de stocker plusieurs fois une même information
+                            ou pour construire des objets (comme les listes par compréhension). range est aussi un générateur, 
                             il crée une à une les valeurs et pas directement une liste.
                         </p>
                     </article>
                     <article>
                         <h2>reserved et filter, des fonctions sur des iterables</h2>
                         <p>
-                            Et oui, il n'y rien de mieux que ces deux exemples, reversed permet de parcourir 
+                            Eh oui, il n'y rien de mieux que ces deux exemples, reversed permet de parcourir 
                             dans le sens inverse un iterable sans recrée une liste
                             et sans avoir besoin d'utiliser des indices, pour ce qui 
-                            est de filter c'est identique, cette fonction ne crée pas une nouvelle liste filtré mais filtre au moment de l'itération.
-                            Pour voir des exemple l'utilisation de filter vous aller voir dans <a href="lambda.html">le cours précédant</a>
+                            est de filter c'est identique, cette fonction ne crée pas une nouvelle liste filtrée mais filtre au moment de l'itération.
+                            Pour voir des exemples l'utilisation de filter vous allez voir dans <a href="lambda.html">le cours précédant</a>
                         </p>
                         <code>
 mot = "salut"
@@ -158,8 +162,8 @@ for i in range(len(mot)): # mauvaise manière
                     <article>
                         <h2>Zip pour parcourir plusieurs générateurs</h2>
                         <p>
-                            zip() est une fonction prennant en paramètre plusieurs itérables pour les parcourirs simultanément,
-                            vous l'utilserer dans de rare cas mais elle est reste très utile lorsque la nécésité d'un double parcours s'impose
+                            zip() est une fonction prenant en paramètre plusieurs itérables pour les parcourir simultanément,
+                            vous l'utilser dans de rares cas mais elle est reste très utile lorsque la nécéssité d'un double parcours s'impose
                         </p>
                         <code>
 nombres = [1, 2, 3]
@@ -187,7 +191,7 @@ zip(nombres, lettres)
                         </code>
                     </article>
                     <p>
-                        Dans le prochains cours nous verons les fonctions génératrices qui sont en lien très fort avec itérables !
+                        Dans le prochains cours nous vérons les fonctions génératrices qui sont en lien très fort avec itérables !
                     </p>
                 </div>
                 <div id="bottombuttons">
