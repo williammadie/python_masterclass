@@ -70,43 +70,67 @@
                 </div>
                 <div id="with-sommaire">
                     <article>
-                        <h2>Titre 1</h2>
+                        <h2>Yield, faire des générateurs comme des fonctions</h2>
                         <p>
-                            Work in progress
+                            Grace a yield nous pouvons crée des générateurs complexes presque de la même manière
+                            qu'une fonction. Par exemple nous pouvons faire une fonction filtre les nombre non premier d'un générateurs
                         </p>
                         <code>
-import timeit
-from copy import deepcopy
-import re
-#wrong result got 2317 but it's 2242
+def premier(iterable):
+    for number in iterable:
+        if number>1:
+            for n in range(2, number):
+                if number%n==0:
+                    break
+            else:
+                yield number
 
-def rotate(codex):
-    return [codex[1], codex[2][::-1], codex[3], codex[0][::-1]]
+for prim in premier([2, 4, 4, 7, 8, 10, 83, 87, 373, 997]):
+    print(prim, end=" ") # out : 2 7 83 373 997
                         </code>
                         <p>
-                            Work in progress
+                            Nous ponvons imaginer d'autre exemple! Ils sont aussi très utile dans le parcours complexe 
+                            comme itérer dans plusieurs listes en gardant l'ordre croisant sans avoir retrié les listes ou en faire une nouvelle.
                         </p>
                         <code>
-                            import timeit
+def iter_sorted_list(list_of_iterable):
+    iterators = [iter(iterable) for iterable in list_of_iterable]
+
+    nexts = []
+    ends = []
+    for i, iterator in enumerate(iterators):
+        try:
+            nexts.append(next(iterator))
+        except StopIteration:
+            ends.append(i)
+                
+    for di, delete in enumerate(ends):
+        iterators.pop(delete-di)
+        
+    while iterators:
+        i_iterator, min_value = 0, nexts[0]
+        for i, next_value in enumerate(nexts[1:], start=1):
+            if next_value&lt;min_value:
+                i_iterator, min_value = i, next_value
+                
+        try:
+            nexts[i_iterator] = next(iterators[i_iterator])
+        except StopIteration:
+            nexts.pop(i_iterator)
+            iterators.pop(i_iterator)
+        
+        yield min_value
+    
+list_of_iterables = [[1, 3, 4],
+                    [1, 2, 8],
+                    [],
+                    [10, 47, 145],
+                    [-1, 4, 7, 57, 150],
+                    [1,4]]
+
+for i in iter_sorted_list(list_of_iterables):
+    print(i, end=" ") # out : -1 1 1 1 2 3 4 4 4 7 8 10 47 57 145 150
                         </code>
-                        <p>
-                            Work in progress
-                        </p>
-                        <figure>
-                            <img src="images/boucle_while/boucles_intro.png" alt="Schéma du passage dans une boucle">
-                            <figcaption>
-                                fig.1 : Une image
-                            </figcaption>
-                        </figure>
-                        <p>
-                            Work in progress
-                        </p>
-                    </article>
-                    <article>
-                        <h2>Titre 2</h2>
-                        <p>
-                            Work in progress
-                        </p>
                     </article>
                 </div>
                 <div id="bottombuttons">

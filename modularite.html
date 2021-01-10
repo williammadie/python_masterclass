@@ -70,42 +70,74 @@
                 </div>
                 <div id="with-sommaire">
                     <article>
-                        <h2>Titre 1</h2>
+                        <h2>Les modules extérieur</h2>
                         <p>
-                            Work in progress
+                            Ils existe plein de modules comprenant des fonctions autour des mathémaiques (math), 
+                            itinérable (<a href="https://docs.python.org/3/library/itertools.html">itertools</a>), 
+                            tableau à n dimantion (numpy) ou bien permettant l'interaction avec l'os (os)
+                            ou le systeme (sys).
                         </p>
                         <code>
-import timeit
-from copy import deepcopy
-import re
-#wrong result got 2317 but it's 2242
+import itertools
+import numpy as np
+from math import cos
+from math import *
+                        </code>
+                        <p>
+                            Tout d'abord il existe plusieurs façons d'importer des modules. A la première ligne nous importons
+                            tout le module itertools, à la deuxièeme ligne on import le module numpy en le renommant via le
+                            mot clé as permettant de racoursir l'ecriture. A la troisème ligne nous importons que la fonction cos
+                            et nous n'auront donc plus a préciser le module lors de l'appel. Pour la dernière ligne elle permet
+                            d'importer toute les fonctions d'un modules sans avoir repriser le module.
+                        </p>
+                        <code class="firstLineNumber5">
+# parcours tout les tulpes possible composé de 0123456789abcdef d'une longeur de 2
+for chars in itertools.product("0123456789abcdef", repeat=2):
+    print("".join(chars)) 
 
-def rotate(codex):
-    return [codex[1], codex[2][::-1], codex[3], codex[0][::-1]]
+# crée une matrice de 5x9
+array = np.zeros((5, 9))
+print(array)
+
+# cosinus de 10
+print(cos(10))
                         </code>
                         <p>
-                            Work in progress
-                        </p>
-                        <code>
-                            import timeit
-                        </code>
-                        <p>
-                            Work in progress
-                        </p>
-                        <figure>
-                            <img src="images/boucle_while/boucles_intro.png" alt="Schéma du passage dans une boucle">
-                            <figcaption>
-                                fig.1 : Une image
-                            </figcaption>
-                        </figure>
-                        <p>
-                            Work in progress
+                            La puissance des modules est que vous n'avez pas refaire ce qui a déjà été partager par d'autre.
+                            Cela permet de faire des projets rapidement et efficasement et fait une des force majeurs de python.
                         </p>
                     </article>
                     <article>
-                        <h2>Titre 2</h2>
+                        <h2>Vos propres modules</h2>
                         <p>
-                            Work in progress
+                            Vos code commancent à être long il serais donc mieux de pouvoir les mettres dans plusieurs fichier
+                            et bien vous le pouvez et ceux d'un façons très simple .
+                        </p>
+                        <code>
+def bonjour(nom):
+    print(f"Bonjour {nom}")
+                        </code>
+                        <p>
+                            Voulais un code simple que vous aimeriez utilisé dans 
+                            votre programme principale, vous avez juste à faire comme suit.
+                        </p>
+                        <code>
+from salutation import bonjour
+
+bonjour("Alice") # Bonjour Alice
+                        </code>
+                        <p>
+                            Pour que tout ce passe comme prévu il faut bien que les deux fichier soit au endroit 
+                        </p>
+                        <figure>
+                            <img src="images/modularite/orga.png" alt="Image de main.py et salutation.py dans un dossier nommé projet">
+                            <figcaption>
+                                fig.1 : main.py et salutation.py dans un dossier nommé projet
+                            </figcaption>
+                        </figure>
+                        <p>
+                            Dans le cas ou il salutation serais dans un dossier nommé mesfonction 
+                            il faudrait non plus import salutation mais mesfonction.salutation
                         </p>
                     </article>
                 </div>
