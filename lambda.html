@@ -70,42 +70,71 @@
                 </div>
                 <div id="with-sommaire">
                     <article>
-                        <h2>Titre 1</h2>
+                        <h2>Une fonction en plus compact mais pas que !</h2>
                         <p>
-                            Work in progress
+                            Précédemment nous avons vu les fonctions permettant de gérer des parties 
+                            code se répétant à plusieurs endroits et une meilleure optimisation de l'organisation. 
+                            Une fonction fait une action, mais nous pouvons très bien les faire 
+                            en une ligne grâce à des fonctions lambda.
                         </p>
                         <code>
-import timeit
-from copy import deepcopy
-import re
-#wrong result got 2317 but it's 2242
+factorielle_lambda = lambda n: 1 if n==0 else n*factoriellen-1 # fonction lambda
 
-def rotate(codex):
-    return [codex[1], codex[2][::-1], codex[3], codex[0][::-1]]
+def factorielle_def(n): # fonction nommé
+    if n==0:
+        return 1
+    return n*factorielle_avec_def(n-1)
+
+print(factorielle_lambda(3), factorielle_def(3))
                         </code>
+                    </article>
+                    <article>
+                        <h2>Elles agissent dans l'ombre</h2>
                         <p>
-                            Work in progress
+                            Les fonctions lambda sont dites anonymes, elles ne portent pas de nom, 
+                            ce qui est pratique pour les fonctions que l'on voudrait n'utiliser qu'une seule fois, 
+                            par contre elles sont à éviter pour des fonctions appelant d'autres fonctions autre 
+                            qu'elle-même ou pour des fonctions courtes mais se répétant à plusieurs endroits. 
+                            De plus comme ces fonctions ne possèdent pas de nom elles ont aussi un mauvais traceback
+                            qui empêche d'avoir des messages clairs indiquant le nom de la fonction où l'erreur s'est produite.
                         </p>
                         <code>
-                            import timeit
+Traceback (most recent call last):
+File "c:/PythonMasterClass/lambda.py", line 7, in &lt;module&gt;
+    division_de_10_lambda(0)
+File "c:/PythonMasterClass/lambda.py", line 1, in &lt;lambda&gt;
+    division_de_10_lambda =  lambda x: 10/x
+ZeroDivisionError: division by zero
                         </code>
                         <p>
-                            Work in progress
+                            Une erreur dans une fonction lambda n'affichera pas dans le stack le nom de la variable qui la stocke
+                            (elle affichera par contre la ligne ou la fonction est déclarée).
                         </p>
-                        <figure>
-                            <img src="images/boucle_while/boucles_intro.png" alt="Schéma du passage dans une boucle">
-                            <figcaption>
-                                fig.1 : Une image
-                            </figcaption>
-                        </figure>
+                        <code>
+Traceback (most recent call last):
+File "c:/PythonMasterClass/lambda.py", line 7, in &lt;module&gt;
+    division_de_10(0)
+File "c:/PythonMasterClass/lambda.py", line 4, in division_de_10
+    return 10/x
+ZeroDivisionError: division by zero
+                        </code>
                         <p>
-                            Work in progress
+                            Ici c'est une fonction nommée on peut donc voir où est l'erreur avec moins de texte surperflu et donc plus simple à débuger !
                         </p>
                     </article>
                     <article>
-                        <h2>Titre 2</h2>
+                        <h2>Ça sert à quoi réellement ?</h2>
                         <p>
-                            Work in progress
+                            Les fonctions lambda sont souvent utilisées par d'autres fonctions qui les prennent en paramètre 
+                            et qui permettent alors diverses actions sans avoir besoin de déclarer une fonction nommée.
+                        </p>
+                        <code>
+une_liste_avec_des_tuples = [(1, 2), (3, 1), (4, 5)]
+print(sorted(une_liste_avec_des_tuples, key=lambda t: t[1])) #[(3, 1), (1, 2), (4, 5)]
+                        </code>
+                        <p>
+                            Ne vous inquiétez pas si vous ne comprennez pas le sens des deux fonctions,
+                            vous pouvez toujours vous renseigner sur <a href="breviaire.html#fonction-native">les fonctions natives</a>.
                         </p>
                     </article>
                 </div>
