@@ -70,42 +70,79 @@
                 </div>
                 <div id="with-sommaire">
                     <article>
-                        <h2>Titre 1</h2>
+                        <h2>Qu'est-ce qu'une fonction ?</h2>
                         <p>
-                            Work in progress
+                            Lorsque l'on réalise un programme, il arrive souvent qu'on utilise plusieurs fois un même morceau de code avec des paramètres
+                            différents. Plutôt que de copier-coller sans aucune forme de pitié, on va isoler ce morceau de code dans une fonction.
+                        </p>
+                        <p>
+                            Cette fonction est appelable à n'importe quelle moment dans notre code. Elle peut afficher quelque chose, prendre différents éléments
+                            et effectuer une opération dont elle renverra le résultat. Voyons cela d'un peu plus près :
                         </p>
                         <code>
-import timeit
-from copy import deepcopy
-import re
-#wrong result got 2317 but it's 2242
-
-def rotate(codex):
-    return [codex[1], codex[2][::-1], codex[3], codex[0][::-1]]
+def premiere_fonction():                        #Signature de la fonction
+    print("Une fonction affiche ce texte")      #Code contenu dans la fonction
                         </code>
                         <p>
-                            Work in progress
+                            La ligne 1 est ce qu'on appelle la "signature" de la fonction. C'est ce qui permet de définir la fonction, son nom et les
+                            paramètres qu'elle requiert pour pouvoir être appelé. (Ici, il n'y a aucun paramètre renseigné).
+                        </p>
+                        <p>
+                            La ligne 2 contient le code qui sera exécuté lorsque la fonction sera appelée. Il est bien entendu possible d'avoir plusieurs lignes
+                            de code dans une fonction. Pour qu'elle soit dans la fonction, il ne faut pas oublier la tabulation !
                         </p>
                         <code>
-                            import timeit
+def deuxieme_fonction(score1, score2):  #Signature : deux paramètres score1, score2
+    print("Score J1 : ", score1)        #Actions à effectuer
+    print("Score J2 : ", score2)
+    print("Accrochez-vous ! La partie n'est pas encore finie !")
                         </code>
                         <p>
-                            Work in progress
+                            Il est également possible de renvoyer le résultat d'une opération au code principal. Pour cela, on utilise le mot-clé "return".
+                            Dans la fonction ci-dessous, on retourne "vrai" si le nombre est positif et "faux" si le nombre est négatif.
                         </p>
-                        <figure>
-                            <img src="images/boucle_while/boucles_intro.png" alt="Schéma du passage dans une boucle">
-                            <figcaption>
-                                fig.1 : Une image
-                            </figcaption>
-                        </figure>
-                        <p>
-                            Work in progress
-                        </p>
+                        <code>
+def is_positive(nombre):   #Signature
+    if nombre &lt; 0:      #Dans le cas où "nombre" est négatif
+        return false
+    else:
+        return true
+                        </code>
+                        
                     </article>
                     <article>
-                        <h2>Titre 2</h2>
+                        <h2>Intégrer les fonctions à notre code</h2>
                         <p>
-                            Work in progress
+                            Maintenant que nous savons créer une fonction et que nous savons y placer notre code, il faut que nous puissions l'Intégrer
+                            au reste de notre programme. En l'état, la fonction ne s'exécutera jamais. Pourquoi ? Parce qu'elle n'est, à aucun moment, appelée
+                            dans le reste du programme. Résolvons ce problème avec la fonction "is_positive".
+                        </p>
+                        <code>
+def is_positive(nombre):   
+    if nombre &lt; 0:      
+        return false
+    else:
+        return true
+
+nombre = int(input("Saisissez un nombre : "))   #Saisie d'un nombre
+
+resultat = is_positive(nombre)      #Appel de la fonction + Attribution du résultat à
+                                    #la variable resultat
+
+if resultat==True:                  #Si la variable vaut "vraie"
+    print("Le nombre est positif")  
+else:                               #Si la variable vaut "fausse"
+    print("Le nombre est négatif")
+                        </code>
+                        <p>
+                            Comme dans l'exemple ci-dessus, on place généralement toutes nos fonctions en haut de notre code. La partie principale suit la ou les
+                            fonctions. Ici, on demande à l'utilisateur de saisir un nombre à sa convenance. On va ensuite appeler la fonction "is_positive" en lui
+                            précisant qu'on travaille sur la valeur contenue dans la variable "nombre". On passe donc "nombre" en paramètre lors de l'appel.
+                        </p>
+                        <p>
+                            La fonction effectue son travail et nous renvoie ensuite vrai ou faux, en fonction du nombre entré par l'utilisateur. La valeur
+                            renvoyée par la fonction est attribuée à la variable "resultat". On continue notre code avec cette valeur. En fonction de la valeur renvoyée,
+                            on affiche différents messages.
                         </p>
                     </article>
                 </div>

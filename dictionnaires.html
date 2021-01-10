@@ -70,43 +70,100 @@
                 </div>
                 <div id="with-sommaire">
                     <article>
-                        <h2>Titre 1</h2>
+                        <h2>Créer un dictionnaire</h2>
                         <p>
-                            Work in progress
+                            Voici une autre structure de données très utile. Certainement une des plus utilisées, elle permet de contenir des objets tout
+                            comme les listes et les tuples. Toutefois, à la différence de la liste, le dictionnaire n'admet pas d'ordre. Les objets sont associés
+                            à des clefs. Le dictionnaire utilise des crochets {}.
                         </p>
                         <code>
-import timeit
-from copy import deepcopy
-import re
-#wrong result got 2317 but it's 2242
+dictionnaire = {} #Initialisation d'un dictionnaire vide.
+                        </code>
+                        <p>
+                            Construisons notre premier dictionnaire ! Nous allons y stocker le prénom, le nom, l'âge et le numéro de téléphone de John Rouge.
+                        </p>
+                        <code>
+dictionnaire = {} #Initialisation d'un dictionnaire vide.
 
-def rotate(codex):
-    return [codex[1], codex[2][::-1], codex[3], codex[0][::-1]]
+#Ajout des différentes informations
+dictionnaire["prenom"] = "John"
+dictionnaire["nom"] = "Rouge"
+dictionnaire["age"] = 32
+dictionnaire["num_tel"] = "06.80.85.12.45"
+
+print(dictionnaire)
+
+#Sortie console
+{"prenom" : "John", "nom" : "Rouge", "age" : 32, "num_tel" : "06.80.85.12.45"}
                         </code>
                         <p>
-                            Work in progress
+                            Nous avons utilisé des chaînes de caractères comme clefs mais il est possible d'utiliser n'importe quel type ! On peut tout à fait
+                            avoir un entier, un tuple, un caractère, un décimal comme clef. 
+                        </p>
+                        <h2>Supprimer les objets d'un dictionnaire</h2>
+                        <p>
+                            Maintenant que nous savons créer un dictionnaire et ajouter des objets à l'intérieur, intéressons-nous aux deux manières de supprimer
+                            des objets :
+                            <ul>
+                                <li>del</li>
+                                <li>pop()</li>
+                            </ul>
+                            Et voici leur usage illustré :
                         </p>
                         <code>
-                            import timeit
+identite = {            #Initialisation
+    "prenom" : "John",
+    "nom" : "Rouge",
+    "age" : 32,
+    "num_tel" : "06.80.85.12.45"}   
+
+del identite["age"] #Supprime la clef et l'objet associé (Méthode 1)
+
+identite.pop("age") #Supprime la clef et l'objet associé 
+# PUIS renvoie la valeur de l'objet (Méthode 2)
+#Ici, la méthode renvoie 32.
+                        </code>
+                        <h2>Parcourir un dictionnaire</h2>
+                        <p>
+                            Apprenons à parcourir facilement les dictionnaires. Ici, rien de surprenant : on retrouve la même structure que celle utilisée
+                            pour parcourir les listes vues précédemment.<br>
+                            Affichons les clefs contenues dans ce dictionnaires.
+                        </p>
+                        <code>
+for clef in identite:   #Pour chaque clef dans le dictionnaire identite
+    print(clef)         #Afficher la clef
+
+#Sortie console
+prenom
+nom
+age
+num_tel
+                        </code>
+                        <p>Affichons maintenant les valeurs associées à chaque clef : </p>
+                        <code>
+for valeurs in identite.values():   #Pour chaque clef dans le dictionnaire identite
+    print(valeurs)                  #Affiche la valeur
+
+#Sortie console
+John
+Rouge
+32
+06.80.85.12.45
                         </code>
                         <p>
-                            Work in progress
+                            Mais alors, et si je veux afficher la clef et sa valeur simultanément ? Pas de panique ! Il existe aussi une méthode pour cela.
+                            L'écriture de la boucle diffère légèrement mais cela reste accessible :
                         </p>
-                        <figure>
-                            <img src="images/boucle_while/boucles_intro.png" alt="Schéma du passage dans une boucle">
-                            <figcaption>
-                                fig.1 : Une image
-                            </figcaption>
-                        </figure>
-                        <p>
-                            Work in progress
-                        </p>
-                    </article>
-                    <article>
-                        <h2>Titre 2</h2>
-                        <p>
-                            Work in progress
-                        </p>
+                        <code>
+for clef, valeur in identite.items():
+    print(clef, ":", valeur)
+
+#Sortie console
+prenom : John
+nom : Rouge
+age : 32
+num_tel : 06.80.85.12.45
+                        </code>
                     </article>
                 </div>
                 <div id="bottombuttons">
