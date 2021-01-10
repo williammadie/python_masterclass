@@ -70,43 +70,46 @@
                 </div>
                 <div id="with-sommaire">
                     <article>
-                        <h2>Titre 1</h2>
+                        <h2>L'algèbre Booléen</h2>
                         <p>
-                            Work in progress
+                            Les boolean , booléen en Français, sont des type de variable à deux états « True » et « False » correspondant en Python à 1 et 0 respectivement. Elles ont pour but de représenter les valeurs de vérité de la logique de l’algèbre booléenne, crée par George Boole au XIXème siècle.
                         </p>
-                        <code>
-import timeit
-from copy import deepcopy
-import re
-#wrong result got 2317 but it's 2242
+                        <p>Les objets suivants sont considérés comme étant valeur booléenne fausse par défaut : la valeur numérique de zéro que ce soit un int ou un float ou tout autre type numérique, la valeur nulle (None), les contenants vides (listes,ensembles etc.) et les chaînes de caractère vides. On peut bien entendu fixer une valeur (True ou False) à la déclaration d’une variable.
 
-def rotate(codex):
-    return [codex[1], codex[2][::-1], codex[3], codex[0][::-1]]
-                        </code>
-                        <p>
-                            Work in progress
                         </p>
-                        <code>
-                            import timeit
-                        </code>
-                        <p>
-                            Work in progress
+                        <p>Qui dit algèbre différents, dit opérateurs différents. En effet, pour manier le boolean on doit utiliser d’autres opérateurs que ceux habituels : and (ET), or (Ou logique) et not (négation logique).
+                        
                         </p>
-                        <figure>
-                            <img src="images/boucle_while/boucles_intro.png" alt="Schéma du passage dans une boucle">
-                            <figcaption>
-                                fig.1 : Une image
-                            </figcaption>
-                        </figure>
-                        <p>
-                            Work in progress
+
+                        <p></p>
+                        <p></p>
+                        <p>On peut aussi utiliser les opérateurs de comparaison habituels :
+                            supérieurs et inférieurs : <code> &lt; </code>, <code> &gt; </code> </br>
+                            supérieurs ou égale et inférieur ou égale : <code> &lt; </code> =, <code> &gt; </code> = . </br>
+                            égal ou inégal : == ,!= . </br>
+                            Le « ! » quant à lui est un opérateur qui signifie la négation logique.
                         </p>
-                    </article>
-                    <article>
-                        <h2>Titre 2</h2>
+
+                            <code>
+                              
+                             >>>  x= 5&lt;9 # True 
+                             >>>  x= 5&gt;9 # False 
+                             >>>  x= 5&ge;5 # True 
+                             >>>  x=5==5# True 
+                             >>>  x= 5!=5 # False 
+                             >>>  x= 2&gt;5 and 5&lt;29 # False
+                             >>>   x= 2&gt;5 or 5&lt;29 # True
+                    
+                            </code>
+                      
+                       
                         <p>
-                            Work in progress
+                           
+                        En faisant par exemple : <code> 2&lt;5 and 5&lt;29 </code> <code> on a donc écrit 2&lt;5&gt;29. </code>
+                        Il existe encore d’autres opérateurs qui seront utilisés dans la suite du cours notamment in qui permet de tester l’appartenance d’une valeur à un ensemble (on verra ça par la suite ) et d’autres plus complexe.
                         </p>
+
+                        <p>Voilà, vous savez tout ce qu’il faut pour commencer à utiliser les boolean dans vos programmes ! </p>
                     </article>
                 </div>
                 <div id="bottombuttons">

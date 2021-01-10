@@ -70,43 +70,59 @@
                 </div>
                 <div id="with-sommaire">
                     <article>
-                        <h2>Titre 1</h2>
+                        <h2>L'instruction IF</h2>
                         <p>
-                            Work in progress
+                            En python il existe des outils appelés structures de contrôle qui permettent le contrôle de flux que l’on trouve dans d’autres langages de programmation mais comme chacun possède ses propres tournures et surtout sa propre syntaxe il est nécessaire de l’expliquer.
                         </p>
-                        <code>
-import timeit
-from copy import deepcopy
-import re
-#wrong result got 2317 but it's 2242
 
-def rotate(codex):
-    return [codex[1], codex[2][::-1], codex[3], codex[0][::-1]]
-                        </code>
                         <p>
-                            Work in progress
-                        </p>
-                        <code>
-                            import timeit
-                        </code>
-                        <p>
-                            Work in progress
+                           L’instruction IF permet grâce à l’utilisation d’une condition booléenne , de parcourir une partie du programme en excluant les autres ou non. </br>
+                           IF se traduit par Si, THEN par Alors , ELSE Sinon et Else IF par Sinon Si.
                         </p>
                         <figure>
-                            <img src="images/boucle_while/boucles_intro.png" alt="Schéma du passage dans une boucle">
+                            <img src="images/Condition/IF.png" alt="Schéma pour expliquer l'instruction IF">
                             <figcaption>
-                                fig.1 : Une image
+                                fig.1 : Schéma de l'Instruction IF
                             </figcaption>
                         </figure>
                         <p>
-                            Work in progress
+                            Dans ce schéma on voit plusieurs cas d’utilisation de IF et de ses variantes. 
+                        </p>
+                       
+                        <p>
+                            Dans le premier embranchement on voit 2 chemin : le chemin bleu et le chemin jaune.
+Selon la condition imposé par le IF, l’un des deux chemin sera pris : si la condition est respectée, alors le programme continuera sur le chemin bleu. Si par contre elle n’est pas respectée, alors le programme ira sur le chemin jaune.
+                        </p>
+                        <p></p>
+                        <p></p>
+                        <p>Lors de la création d’un IF il n’est pas nécessaire de créer un Else et on peut créer autant de Else IF que l’on veut, tant qu’aucune condition nécessaire n’est égale à une autre de la structure du if (Il faut que parmi toutes les conditions, il ne puisse y avoir à chaque cas qu’une seule condition respectée). 
+
                         </p>
                     </article>
                     <article>
-                        <h2>Titre 2</h2>
+                        <h2>En Python</h2>
                         <p>
-                            Work in progress
+                            Il est temps de voir ça en python :
                         </p>
+                        <code>
+                            test=5
+                            >>> if test&lt;9:
+                                test=test+1
+                            elif test&gt;9:
+                                test=0
+                            else:
+                                test=10
+                                
+                            >>> test
+                            6
+
+                        </code>
+                    <p>La condition du IF est une inégalité (<code>&gt;9)</code>, le THEN est ici un augmentation de 1 de la variable, le Else If quant lui est la condition <code>&lt;9</code>. Si les 2 conditions ne sont pas respectées alors c’est le Else qui s’applique.
+                    </br> Voilà vous savez tout ce qu’il y a à savoir sur le If et ses dérivés, n’hésitez pas à vous entraînez à faire des condition de plus en plus spécifique et de vous amuser avec ces nouvelles compétences.
+                    </p>
+                    <p>
+                        À présent il est temps d’approfondir ce que l’on sait sur les structures de contrôle, rendez-vous au prochain cours !
+                    </p>
                     </article>
                 </div>
                 <div id="bottombuttons">

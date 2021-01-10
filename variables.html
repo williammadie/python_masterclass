@@ -70,42 +70,60 @@
                 </div>
                 <div id="with-sommaire">
                     <article>
-                        <h2>Titre 1</h2>
+                        <h2>Déclaration et utilisation</h2>
                         <p>
-                            Work in progress
+                            En programmation, et donc en Python, une variable est un espace de stockage pour un résultat. Une variable contient une valeur qui peut changer au cours de l’exécution du programme. En Python on déclare une variable en même temps que l’on l’initialise :
                         </p>
                         <code>
-import timeit
-from copy import deepcopy
-import re
-#wrong result got 2317 but it's 2242
-
-def rotate(codex):
-    return [codex[1], codex[2][::-1], codex[3], codex[0][::-1]]
+                    >>> var=5 </br>
+                    >>> 2*var </br>
+                    10 </br>
+                    >>> var=3 </br>
+                    >>> 2*var </br>
+                    6
                         </code>
                         <p>
-                            Work in progress
+                            Ici on initialise la variable «var» à laquelle on fixe la valeur 5 grâce au symbole « = »on fait un calcul et on change la valeur de «var» en 3.
                         </p>
-                        <code>
-                            import timeit
-                        </code>
-                        <p>
-                            Work in progress
-                        </p>
+                        <p>Si on tente d’utiliser une variable sans lui fixer de valeur on a l’exception qu’on a vu dans la partie Erreur :</p>
                         <figure>
-                            <img src="images/boucle_while/boucles_intro.png" alt="Schéma du passage dans une boucle">
+                            <img src="images/Variables/erreur def.png" alt="Erreur de définition">
                             <figcaption>
-                                fig.1 : Une image
+                                fig.1 : Erreur de définition de la variable
                             </figcaption>
                         </figure>
                         <p>
-                            Work in progress
+                            En Python on peut utiliser la variable « _ » pour utiliser le résultat précédemment obtenu (comme le bouton Ans sur une calculatrice scientifique) :
                         </p>
+                        <code>
+                            >>> 5*2 </br>
+                            10 </br>
+                            >>> 5+_ </br>
+                            15 </br>
+                       </code>
+                       <p></p>
+                        
                     </article>
                     <article>
-                        <h2>Titre 2</h2>
+                        <h2>Les Types de variables</h2>
                         <p>
-                            Work in progress
+                            À présent il est temps de parler du type de variables. 
+                        </br> Le Python est un langage à typage dynamique, on ne précise donc pas le type de la variable à la création, l’ordinateur déduit lui même le type associé pour savoir si il peut faire ou ne pas faire certaines opérations. 
+                    </br>Cela permet entre autre de ne pas fixer un type à une variable et de pouvoir changer le type de valeur qu’elle contient à la volée :
+                        </p>
+
+                        <figure>
+                            <img src="images/Variables/type1.png" alt="Changer le type de ce que contient une variable">
+                            <figcaption>
+                                fig.2 : En Python, on peut à tout moment changer quel type de variable se trouve dans celle-ci
+                            </figcaption>
+                        </figure>
+                        <p>
+                            Ici on fixe d’abord 5 (int) à la variable « test » et on change ensuite en y mettant la chaîne de caractère « Python » . </br>
+                            Il existe différents types de variables, notamment les types int (entiers) float (flottant, à virgule) complex ou encore str (String, chaînes de caractères) ou même boolean.
+                            </p>
+                            <p>
+                            Penchons un peu sur ce dernier dans la prochaine partie du cours !
                         </p>
                     </article>
                 </div>
